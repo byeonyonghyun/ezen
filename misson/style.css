@@ -1,0 +1,75 @@
+@font-face {
+	font-family: "Kakao";
+	src: url(./font/KakaoBig-Regular-v1.0.4bf7d77.ttf);
+}
+
+body {
+	font-family: Kakao;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+#container {
+	width: 428px;
+	height: 926px;
+	background: #fff;
+	border: 1px solid #807a7a;
+}
+
+header {
+	margin-top: 24px;
+	margin-right: 30px;
+	text-align: right;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+section {
+	margin-top: 43px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+}
+section div {
+	font-size: 30px;
+	margin-bottom: 50px;
+	margin-left: 30px;
+}
+
+section img {
+	width: 310px;
+	height: 390px;
+	margin-bottom: 50px;
+	margin-left: 59px;
+}
+
+footer {
+	margin-left: 30px;
+}
+
+footer div {
+	text-align: left;
+	font-size: 16px;
+	color: #807a7a;
+	margin-bottom: 15px;
+}
+
+footer button {
+	width: 368px;
+	height: 60px;
+	border: none;
+	border-radius: 5px;
+	background-color: #fae100;
+	font-size: 20px;
+	font-family: Kakao;
+}
+
+footer button:hover {
+	background: transparent;
+	border: 1px solid #fea100;
+}
