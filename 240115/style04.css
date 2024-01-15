@@ -1,0 +1,5 @@
+@import url(./resetcss.css);
+
+input:not([type="password"]) {
+	background: #f00;
+}
