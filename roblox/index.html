@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css" />
+  <script src="https://kit.fontawesome.com/6fa801e571.js" crossorigin="anonymous"></script>
   <title>Roblox</title>
 </head>
 
@@ -29,6 +30,7 @@
         <article class="inner_contents birthday">생년월일</article>
         <div id="calendar">
           <select name="year" id="year">
+            <option selected disabled>년</option>
             <option value="2024">2024년</option>
             <option value="2024">2023년</option>
             <option value="2024">2022년</option>
@@ -46,6 +48,7 @@
             <option value="2024">2010년</option>
           </select>
           <select name="month" id="month">
+            <option selected disabled>월</option>
             <option value="jan">1월</option>
             <option value="jan">2월</option>
             <option value="jan">3월</option>
@@ -60,6 +63,7 @@
             <option value="jan">12월</option>
           </select>
           <select name="day" id="day">
+            <option selected disabled>일</option>
             <option value="01">01일</option>
             <option value="01">02일</option>
             <option value="01">03일</option>
@@ -93,12 +97,82 @@
             <option value="01">31일</option>
           </select>
         </div>
-        <article class="inner_contents username">사용자 이름</article>
-        <article class="inner_contents userpassword">비밀번호</article>
+        <article class="inner_contents username">
+          <label for="user">사용자 이름</label>
+          <input type="text" id="user" placeholder="실명을 사용하지 마세요" />
+        </article>
+        <article class="inner_contents userpassword">
+          <label for="password">비밀번호</label>
+          <input type="password" id="password" placeholder="영문, 알파벳, 최소 8자 이상">
+        </article>
+        <article class="inner_contents gender">성별(선택사항)</article>
+        <div id="gender_btn">
+          <input type="submit" value="여성">
+          <input type="submit" value="남성">
+        </div>
+        <article class="inner_contents check">
+          <div>
+            <div id="firstcheck">
+              <input type="checkbox" name="auth" id="auth">
+              <label for="auth">이용약관을 검토했으며, 이에 동의합니다.</label>
+            </div>
+            <div id="secondcheck">
+              <input type="checkbox" name="private" id="private">
+              <label for="">개인정보처리방침에 동의합니다.</label>
+            </div>
+          </div>
+        </article>
+        <article class="inner_contents btn">
+          <input type="submit" value="회원가입" />
+        </article>
       </form>
     </section>
 
-    <footer></footer>
+    <footer>
+      <h3>다양한 기기로 ROBLOX를 즐기세요</h3>
+      <div id="items">
+
+        <div class="inner_item">
+          <span>
+            <i class="fa-brands fa-apple"></i>
+          </span>
+          <div class="inner_item_info">
+            <div class="inner_item_title">Download on the</div>
+            <div class="inner_item_body">App Store</div>
+          </div>
+        </div>
+
+        <div class="inner_item">
+          <span>
+            <i class="fa-brands fa-google-play"></i>
+          </span>
+          <div class="inner_item_info">
+            <div class="inner_item_title">GET IT ON</div>
+            <div class="inner_item_body">Google Play</div>
+          </div>
+        </div>
+
+        <div class="inner_item">
+          <span>
+            <i class="fa-brands fa-meta"></i>
+          </span>
+          <div class="inner_item_info">
+            <div class="inner_item_title">GET IT FROM</div>
+            <div class="inner_item_body">Meta Quest</div>
+          </div>
+        </div>
+
+        <div class="inner_item">
+          <span>
+            <i class="fa-brands fa-playstation"></i>
+          </span>
+          <div class="inner_item_info">
+            <div class="inner_item_title">Available at</div>
+            <div class="inner_item_body">Playstation</div>
+          </div>
+
+        </div>
+    </footer>
   </div>
 </body>
 
