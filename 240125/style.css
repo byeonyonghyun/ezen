@@ -1,0 +1,51 @@
+/* body {
+	background-color: greenyellow;
+} */
+
+/* div {
+	width: 100px;
+	height: 100px;
+	background-color: #000;
+}
+
+div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+} */
+/* 
+body {
+	background-color: yellowgreen;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+div {
+	height: 100px;
+	width: 100px;
+	background-color: #000;
+} */
+
+.parent {
+	border: 3px solid #0f0;
+	height: 500px;
+	display: flex;
+	align-items: ;
+}
+
+.parent div {
+	width: 300px;
+	background-color: crimson;
+	text-align: center;
+	color: #fff;
+	margin: 5px;
+}
+
+.child1 {
+	/* height: 100px; */
+}
+.child2 {
+	height: 200px;
+}
