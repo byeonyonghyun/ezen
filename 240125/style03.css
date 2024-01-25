@@ -1,6 +1,8 @@
 .parent {
 	border: 5px solid green;
+	height: 500px;
 	display: flex;
+	align-items: flex-start;
 }
 
 .parent div {
@@ -9,17 +11,29 @@
 	margin: 5px;
 	color: #fff;
 	text-align: center;
-	background-color: crimson;
 }
 .child1 {
 	/* flex-grow: 1; */
-	flex-shrink: 3;
+	/* flex-shrink: 3; */
+	/* flex-basis: 100px; */
+	background-color: crimson;
+	flex: 1;
+	order: 1;
+	align-self: center;
 }
 .child2 {
 	/* flex-grow: 2; */
-	flex-shrink: 2;
+	/* flex-shrink: 2; */
+	/* flex-basis: 200px; */
+	background-color: dodgerblue;
+	flex: 1;
+	order: 2;
 }
 .child3 {
 	/* flex-grow: 1; */
-	flex-shrink: 1;
+	/* flex-shrink: 1; */
+	/* flex-basis: 300px; */
+	background-color: yellowgreen;
+	flex: 1;
+	order: 3;
 }
