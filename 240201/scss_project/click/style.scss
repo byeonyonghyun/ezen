@@ -1,0 +1,79 @@
+body {
+	background-color: #222;
+}
+#onoff,
+#light,
+#air,
+#blue,
+#wifi,
+#set {
+	display: block;
+}
+.wrap {
+	height: 100vh;
+	font-size: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	color: #fff;
+
+	.onoff {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		line-height: 200px;
+		cursor: pointer;
+		position: relative;
+	}
+	.light {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		line-height: 200px;
+		border: 2px solid #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px #fff;
+		cursor: pointer;
+	}
+	.air {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		line-height: 200px;
+		border: 2px solid #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px #fff;
+		cursor: pointer;
+	}
+	.blue {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		line-height: 200px;
+		border: 2px solid #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px #fff;
+		cursor: pointer;
+	}
+	.wifi {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		line-height: 200px;
+		border: 2px solid #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px #fff;
+		cursor: pointer;
+	}
+	.set {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		line-height: 200px;
+		border: 2px solid #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px #fff;
+		cursor: pointer;
+	}
+}

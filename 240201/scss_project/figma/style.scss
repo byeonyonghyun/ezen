@@ -1,0 +1,46 @@
+body {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	.wrap {
+		width: 100px;
+		border: 1px solid #000;
+		.illi {
+			display: grid;
+			grid-template-columns: auto auto;
+			h1 {
+				margin-bottom: 20px;
+			}
+			.red {
+				background: #ea4c1d;
+				width: 50px;
+				height: 50px;
+				border-radius: 25px 0 0 25px;
+			}
+			.pink {
+				background: #f76e5f;
+				width: 50px;
+				height: 50px;
+				border-radius: 0 25px 25px 0;
+			}
+			.purple {
+				background: #9d56f7;
+				width: 50px;
+				height: 50px;
+				border-radius: 25px 0 0 25px;
+			}
+			.blue {
+				background: #19b6f6;
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+			}
+			.green {
+				background: #0ac97f;
+				width: 50px;
+				height: 50px;
+				border-radius: 25px 0 25px 25px;
+			}
+		}
+	}
+}
