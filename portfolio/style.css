@@ -1,6 +1,65 @@
-@import url(./reset.css);
-@import url(./font.css);
-
-body{
-    font-family: 'pret';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: pret;
+  src: url(./font/Pretendard-Medium.subset.ttf);
+}
+body {
+  font-family: "pret";
+}
+
+#intro {
+  background: #f0f0f0;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#intro .welcome {
+  background: #f0f0f0;
+  width: 1050px;
+  height: 300px;
+  position: absolute;
+  border: 1px solid #f00;
+}
+#intro .welcome h1 {
+  font-size: 150px;
+  text-align: center;
+}
+#intro .welcome h4 {
+  font-size: 30px;
+  text-align: center;
+}
+#intro .welcome h4::before {
+  content: "";
+  width: 350px;
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  left: 75px;
+  bottom: 60.5px;
+}
+#intro .welcome h4::after {
+  content: "";
+  width: 350px;
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  right: 75px;
+  bottom: 60.5px;
+}/*# sourceMappingURL=style.css.map */
