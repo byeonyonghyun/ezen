@@ -38,32 +38,69 @@ body {
   align-items: center;
   width: 1050px;
   height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
   border: 1px solid #f00;
-}
-#intro .welcome .kr {
-  z-index: 100;
-}
-#intro .welcome .cn {
-  z-index: 99;
-}
-#intro .welcome .us {
-  z-index: 98;
-}
-#intro .welcome .vn {
-  z-index: 97;
-}
-#intro .welcome .fr {
-  z-index: 96;
-}
-#intro .welcome .jp {
-  z-index: 95;
 }
 #intro .welcome h1 {
   font-size: 150px;
 }
 #intro .welcome h4 {
   font-size: 30px;
+}
+
+#main {
+  height: 100vh;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main .main_intro {
+  text-align: center;
+}
+#main .main_intro h4 {
+  font-size: 30px;
+  font-weight: normal;
+  padding: 22px;
+}
+#main .main_intro h3 {
+  font-size: 50px;
+  font-weight: normal;
+  padding-bottom: 22px;
+}
+#main .main_intro h3 span {
+  color: #3aa551;
+}
+#main .main_intro h5 {
+  font-size: 20px;
+}
+#main .main_intro_sub {
+  text-align: center;
+}
+
+#about_me {
+  background: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#about_me .about_intro {
+  font-size: 50px;
+}
+#about_me .about_intro span {
+  font-size: 20px;
+  color: #ccc;
+}
+#about_me .about_contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 330px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=style.css.map */
