@@ -25,12 +25,28 @@ body {
 			align-items: center;
 			width: 1050px;
 			height: 300px;
-			animation: slide 6s linear infinite;
+			animation: slide 1s linear;
 			h1 {
 				font-size: 150px;
 			}
 			h4 {
 				font-size: 30px;
+				display: flex;
+				align-items: center;
+				&::before {
+					content: "";
+					width: 350px;
+					height: 4px;
+					background: #ccc;
+					margin-right: 20px;
+				}
+				&::after {
+					content: "";
+					width: 350px;
+					height: 4px;
+					background: #ccc;
+					margin-left: 20px;
+				}
 			}
 		}
 	}
@@ -92,21 +108,28 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	position: relative;
 	.about_intro {
-		font-size: 50px;
+		font-size: 20px;
+		color: #ccc;
 		width: 600px;
 		height: 150px;
 		span {
-			font-size: 20px;
-			color: #ccc;
+			font-size: 50px;
+			color: #000;
 		}
-		.line {
-			display: block;
-			width: 300px;
-			height: 4px;
-			border-radius: 2px;
-			background: #3aa551;
+		p:nth-child(2) {
+			display: flex;
+			align-items: center;
+			&::before {
+				content: "";
+				display: block;
+				width: 300px;
+				height: 4px;
+				background: #3aa551;
+				margin-right: 34px;
+			}
+			span {
+			}
 		}
 	}
 	.about_contact {

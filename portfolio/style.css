@@ -43,13 +43,29 @@ body {
   align-items: center;
   width: 1050px;
   height: 300px;
-  animation: slide 6s linear infinite;
+  animation: slide 1s linear;
 }
 #intro .intro_box .welcome h1 {
   font-size: 150px;
 }
 #intro .intro_box .welcome h4 {
   font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+#intro .intro_box .welcome h4::before {
+  content: "";
+  width: 350px;
+  height: 4px;
+  background: #ccc;
+  margin-right: 20px;
+}
+#intro .intro_box .welcome h4::after {
+  content: "";
+  width: 350px;
+  height: 4px;
+  background: #ccc;
+  margin-left: 20px;
 }
 #intro button {
   background: #3aa551;
@@ -107,23 +123,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 #about_me .about_intro {
-  font-size: 50px;
+  font-size: 20px;
+  color: #ccc;
   width: 600px;
   height: 150px;
 }
 #about_me .about_intro span {
-  font-size: 20px;
-  color: #ccc;
+  font-size: 50px;
+  color: #000;
 }
-#about_me .about_intro .line {
+#about_me .about_intro p:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+#about_me .about_intro p:nth-child(2)::before {
+  content: "";
   display: block;
   width: 300px;
   height: 4px;
-  border-radius: 2px;
   background: #3aa551;
+  margin-right: 34px;
 }
 #about_me .about_contact {
   position: absolute;
