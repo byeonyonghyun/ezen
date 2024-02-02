@@ -3,81 +3,153 @@
 
 body {
 	font-family: "pret";
+	background: #f0f0f0;
 }
 
 #intro {
-	background: #f0f0f0;
 	height: 100vh;
 	display: flex;
-	position: relative;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	.welcome {
-		background: #f0f0f0;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+	.intro_box {
 		width: 1050px;
 		height: 300px;
 		border: 1px solid #f00;
-		h1 {
-			font-size: 150px;
+		background: #f0f0f0;
+		overflow: hidden;
+		.welcome {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 1050px;
+			height: 300px;
+			animation: slide 6s linear infinite;
+			h1 {
+				font-size: 150px;
+			}
+			h4 {
+				font-size: 30px;
+			}
 		}
-		h4 {
-			font-size: 30px;
-		}
+	}
+	button {
+		background: #3aa551;
+		width: 75px;
+		height: 75px;
+		border: none;
+		border-radius: 75px;
+		font-size: 50px;
+		color: #fff;
+		margin-top: 163px;
+		cursor: pointer;
 	}
 }
 
-#main{
+@keyframes slide {
+	0% {
+		transform: translatey(0);
+	}
+	100% {
+		transform: translatey(-600%);
+	}
+}
+
+#main {
 	height: 100vh;
-	background: #f0f0f0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	.main_intro{
+	.main_intro {
 		text-align: center;
-		h4{
+		h4 {
 			font-size: 30px;
 			font-weight: normal;
 			padding: 22px;
 		}
-		h3{
+		h3 {
 			font-size: 50px;
 			font-weight: normal;
 			padding-bottom: 22px;
-			span{
+			span {
 				color: #3aa551;
 			}
 		}
-		h5{
+		h5 {
 			font-size: 20px;
 		}
 	}
-	.main_intro_sub{
+	.main_intro_sub {
 		text-align: center;
 	}
 }
 
-#about_me{
-	background: #f0f0f0;
+#about_me {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	.about_intro{
+	.about_intro {
 		font-size: 50px;
-		span{
+		width: 600px;
+		height: 150px;
+		span {
 			font-size: 20px;
-			color:#ccc
+			color: #ccc;
+		}
+		.line {
+			display: block;
+			width: 300px;
+			height: 4px;
+			border-radius: 2px;
+			background: #3aa551;
 		}
 	}
-	.about_contact{
+	.about_contact {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 450px;
+		height: 330px;
+		background: #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+	.about_edu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 520px;
+		height: 250px;
+		background: #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+	.about_values {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 460px;
+		height: 180px;
+		background: #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+	.about_ability {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 520px;
+		height: 390px;
+		background: #fff;
+		border-radius: 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+	.about_favorite {
 		position: absolute;
 		top: 0;
 		left: 0;

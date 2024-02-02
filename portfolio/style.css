@@ -19,37 +19,60 @@ a {
 }
 body {
   font-family: "pret";
+  background: #f0f0f0;
 }
 
 #intro {
-  background: #f0f0f0;
   height: 100vh;
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#intro .welcome {
+#intro .intro_box {
+  width: 1050px;
+  height: 300px;
+  border: 1px solid #f00;
   background: #f0f0f0;
+  overflow: hidden;
+}
+#intro .intro_box .welcome {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 1050px;
   height: 300px;
-  border: 1px solid #f00;
+  animation: slide 6s linear infinite;
 }
-#intro .welcome h1 {
+#intro .intro_box .welcome h1 {
   font-size: 150px;
 }
-#intro .welcome h4 {
+#intro .intro_box .welcome h4 {
   font-size: 30px;
 }
+#intro button {
+  background: #3aa551;
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 75px;
+  font-size: 50px;
+  color: #fff;
+  margin-top: 163px;
+  cursor: pointer;
+}
 
+@keyframes slide {
+  0% {
+    transform: translatey(0);
+  }
+  100% {
+    transform: translatey(-600%);
+  }
+}
 #main {
   height: 100vh;
-  background: #f0f0f0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,7 +102,6 @@ body {
 }
 
 #about_me {
-  background: #f0f0f0;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -89,12 +111,61 @@ body {
 }
 #about_me .about_intro {
   font-size: 50px;
+  width: 600px;
+  height: 150px;
 }
 #about_me .about_intro span {
   font-size: 20px;
   color: #ccc;
 }
+#about_me .about_intro .line {
+  display: block;
+  width: 300px;
+  height: 4px;
+  border-radius: 2px;
+  background: #3aa551;
+}
 #about_me .about_contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 330px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#about_me .about_edu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 520px;
+  height: 250px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#about_me .about_values {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 460px;
+  height: 180px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#about_me .about_ability {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 520px;
+  height: 390px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#about_me .about_favorite {
   position: absolute;
   top: 0;
   left: 0;

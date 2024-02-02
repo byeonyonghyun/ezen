@@ -1,79 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+$icon-box-size: 100px;
+$icon-color: #74b9dd;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
 body {
-	background-color: #222;
-}
-#onoff,
-#light,
-#air,
-#blue,
-#wifi,
-#set {
-	display: block;
-}
-.wrap {
-	height: 100vh;
-	font-size: 100px;
+	background-color: #000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 50px;
-	color: #fff;
+	height: 100vh;
+}
 
-	.onoff {
-		width: 200px;
-		height: 200px;
-		text-align: center;
-		line-height: 200px;
-		cursor: pointer;
-		position: relative;
-	}
-	.light {
-		width: 200px;
-		height: 200px;
-		text-align: center;
-		line-height: 200px;
-		border: 2px solid #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px #fff;
-		cursor: pointer;
-	}
-	.air {
-		width: 200px;
-		height: 200px;
-		text-align: center;
-		line-height: 200px;
-		border: 2px solid #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px #fff;
-		cursor: pointer;
-	}
-	.blue {
-		width: 200px;
-		height: 200px;
-		text-align: center;
-		line-height: 200px;
-		border: 2px solid #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px #fff;
-		cursor: pointer;
-	}
-	.wifi {
-		width: 200px;
-		height: 200px;
-		text-align: center;
-		line-height: 200px;
-		border: 2px solid #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px #fff;
-		cursor: pointer;
-	}
-	.set {
-		width: 200px;
-		height: 200px;
-		text-align: center;
-		line-height: 200px;
-		border: 2px solid #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px #fff;
-		cursor: pointer;
+.icons {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 20px;
+	li {
+		input[name="check-item"] {
+			display: none;
+			&:checked + div {
+				box-shadow: 0 0 ($icon-box-size/10) $icon-color;
+			}
+			&:checked + div span {
+				text-shadow: 0 0 ($icon-box-size/10) $icon-color;
+			}
+		}
+		label {
+			cursor: pointer;
+			div {
+				color: #fff;
+				width: $icon-box-size;
+				height: $icon-box-size;
+				background: #111;
+				display: grid;
+				justify-content: center;
+				align-items: center;
+				border: ($icon-box-size/33.33) soild #222;
+				border-radius: calc($icon-box-size/10);
+				span {
+					font-size: calc($icon-box-size/2);
+				}
+			}
+		}
 	}
 }

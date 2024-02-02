@@ -2,44 +2,47 @@ body {
 	display: grid;
 	justify-content: center;
 	align-items: center;
+	height: 100vh;
 	.wrap {
-		width: 100px;
 		border: 1px solid #000;
-		.illi {
+		span {
+			display: block;
+			text-align: center;
+			letter-spacing: 3px;
+			font-size: 45px;
+		}
+		.shape {
 			display: grid;
-			grid-template-columns: auto auto;
-			h1 {
-				margin-bottom: 20px;
-			}
+			grid-template-columns: repeat(2, 1fr);
 			.red {
 				background: #ea4c1d;
-				width: 50px;
-				height: 50px;
-				border-radius: 25px 0 0 25px;
+				width: 75px;
+				height: 75px;
+				border-radius: 50% 0 0 50%;
 			}
 			.pink {
 				background: #f76e5f;
-				width: 50px;
-				height: 50px;
-				border-radius: 0 25px 25px 0;
+				width: 75px;
+				height: 75px;
+				border-radius: 0 50% 50% 0;
 			}
 			.purple {
 				background: #9d56f7;
-				width: 50px;
-				height: 50px;
-				border-radius: 25px 0 0 25px;
+				width: 75px;
+				height: 75px;
+				border-radius: 50% 0 0 50%;
 			}
 			.blue {
 				background: #19b6f6;
-				width: 50px;
-				height: 50px;
-				border-radius: 50px;
+				width: 75px;
+				height: 75px;
+				border-radius: 100%;
 			}
 			.green {
 				background: #0ac97f;
-				width: 50px;
-				height: 50px;
-				border-radius: 25px 0 25px 25px;
+				width: 75px;
+				height: 75px;
+				border-radius: 50% 0 50% 50%;
 			}
 		}
 	}

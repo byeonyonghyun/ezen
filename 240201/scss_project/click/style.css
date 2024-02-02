@@ -1,80 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
 body {
-  background-color: #222;
-}
-
-#onoff,
-#light,
-#air,
-#blue,
-#wifi,
-#set {
-  display: block;
-}
-
-.wrap {
-  height: 100vh;
-  font-size: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  color: #fff;
-}
-.wrap .onoff {
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  cursor: pointer;
-  position: relative;
-}
-.wrap .light {
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #fff;
-  cursor: pointer;
-}
-.wrap .air {
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #fff;
-  cursor: pointer;
-}
-.wrap .blue {
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #fff;
-  cursor: pointer;
-}
-.wrap .wifi {
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #fff;
-  cursor: pointer;
-}
-.wrap .set {
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #fff;
-  cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+	background-color: #222;
+} /*# sourceMappingURL=style.css.map */
