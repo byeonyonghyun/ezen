@@ -47,10 +47,10 @@ body {
 	filter: none;
 	border-radius: 100%;
 }
-.testimonial. .content.active {
+.testimonial .content.active {
 	display: none;
 }
-.testimonial. .content {
+.testimonial .content {
 	display: none;
 }
 .tetstimoanual .content:nth-child(2) {

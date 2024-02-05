@@ -49,13 +49,12 @@ body h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #f00;
 }
 #intro .intro_box {
   width: 1050px;
   height: 300px;
   background: #f0f0f0;
-  position: relative;
+  overflow: hidden;
 }
 #intro .intro_box .welcome {
   display: flex;
@@ -65,6 +64,7 @@ body h5 {
   align-items: center;
   width: 1050px;
   height: 300px;
+  animation: slide 10s infinite steps(8);
 }
 #intro .intro_box .welcome h4 {
   display: flex;
@@ -84,47 +84,8 @@ body h5 {
   background: #ccc;
   margin-left: 20px;
 }
-#intro .intro_box .welcome.kr {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#intro .intro_box .welcome.cn {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#intro .intro_box .welcome.us {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#intro .intro_box .welcome.vn {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#intro .intro_box .welcome.fr {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#intro .intro_box .welcome.jp {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#intro .intro_box .welcome.gm {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#intro .intro_box .welcome.in {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 #intro button {
+  margin-top: 163px;
   background: #3aa551;
   width: 75px;
   height: 75px;
@@ -132,17 +93,20 @@ body h5 {
   border-radius: 75px;
   font-size: 50px;
   color: #fff;
-  margin-top: 163px;
   cursor: pointer;
 }
 
+@keyframes slide {
+  100% {
+    transform: translateY(-800%);
+  }
+}
 #main {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #f00;
 }
 #main .main_intro {
   text-align: center;
@@ -157,14 +121,26 @@ body h5 {
   color: #3aa551;
 }
 #main .main_pic {
-  width: 390px;
+  width: 100%;
   height: 480px;
   margin: 35px;
+}
+#main .main_pic img {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 480px;
+  background-color: #ccc;
 }
 #main .main_intro_sub {
   text-align: center;
 }
-#main button {
+#main .main_bottom {
+  border: 1px solid #00f;
+  text-align: center;
+}
+#main .main_bottom button {
+  display: inline-block;
   background: #3aa551;
   width: 75px;
   height: 75px;
@@ -172,7 +148,6 @@ body h5 {
   border-radius: 75px;
   font-size: 50px;
   color: #fff;
-  margin-top: 163px;
   cursor: pointer;
 }
 
@@ -225,6 +200,7 @@ body h5 {
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
 }
 #about_me .about_edu {
   position: absolute;

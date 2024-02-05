@@ -42,12 +42,11 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid #f00;
 	.intro_box {
 		width: 1050px;
 		height: 300px;
 		background: #f0f0f0;
-		position: relative;
+		overflow: hidden;
 		.welcome {
 			display: flex;
 			background: #f0f0f0;
@@ -56,7 +55,7 @@ body {
 			align-items: center;
 			width: 1050px;
 			height: 300px;
-
+			animation: slide 10s infinite steps(8);
 			h4 {
 				display: flex;
 				align-items: center;
@@ -75,60 +74,24 @@ body {
 					margin-left: 20px;
 				}
 			}
-			&.kr {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-			&.cn {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-			&.us {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-			&.vn {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-			&.fr {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-			&.jp {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-			&.gm {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-			&.in {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
 		}
 	}
 	button {
+		margin-top: 163px;
 		@include btn;
 	}
 }
-
+@keyframes slide {
+	100% {
+		transform: translateY(-800%);
+	}
+}
 #main {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid #f00;
 	.main_intro {
 		text-align: center;
 		h4 {
@@ -142,15 +105,27 @@ body {
 		}
 	}
 	.main_pic {
-		width: 390px;
+		width: 100%;
 		height: 480px;
 		margin: 35px;
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 300px;
+			height: 480px;
+			background-color: #ccc;
+		}
 	}
 	.main_intro_sub {
 		text-align: center;
 	}
-	button {
-		@include btn;
+	.main_bottom {
+		border: 1px solid #00f;
+		text-align: center;
+		button {
+			display: inline-block;
+			@include btn;
+		}
 	}
 }
 
@@ -202,6 +177,9 @@ body {
 		background: #fff;
 		border-radius: 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		padding: 30px;
+		div {
+		}
 	}
 	.about_edu {
 		position: absolute;
