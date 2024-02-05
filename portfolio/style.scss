@@ -274,15 +274,24 @@ body {
 				border: 1px solid #f00;
 				margin-bottom: 80px;
 				@include box;
+				&:hover {
+					background: rgba(0, 0, 0, 0.4);
+				}
 			}
 			.work_sub2 {
 				border: 1px solid #f00;
 				margin-bottom: 80px;
 				@include box;
+				&:hover {
+					background: rgba(0, 0, 0, 0.4);
+				}
 			}
 			.work_sub3 {
 				border: 1px solid #f00;
 				@include box;
+				&:hover {
+					background: rgba(0, 0, 0, 0.4);
+				}
 			}
 		}
 	}

@@ -301,6 +301,9 @@ body h5 {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+#work section .work_right .work_sub1:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
 #work section .work_right .work_sub2 {
   border: 1px solid #f00;
   margin-bottom: 80px;
@@ -309,10 +312,16 @@ body h5 {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+#work section .work_right .work_sub2:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
 #work section .work_right .work_sub3 {
   border: 1px solid #f00;
   width: 380px;
   height: 280px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+#work section .work_right .work_sub3:hover {
+  background: rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=style.css.map */
