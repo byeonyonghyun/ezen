@@ -50,42 +50,50 @@ body h5 {
   justify-content: center;
   align-items: center;
 }
-#intro .intro_box {
-  width: 1050px;
+#intro section {
+  border: 1px solid #0f0;
+  width: 1000px;
+}
+#intro section .intro_box {
+  width: 1000px;
   height: 300px;
   background: #f0f0f0;
   overflow: hidden;
 }
-#intro .intro_box .welcome {
+#intro section .intro_box .welcome {
   display: flex;
   background: #f0f0f0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1050px;
+  width: 1000px;
   height: 300px;
   animation: slide 10s infinite steps(8);
 }
-#intro .intro_box .welcome h4 {
+#intro section .intro_box .welcome h4 {
   display: flex;
   align-items: center;
 }
-#intro .intro_box .welcome h4::before {
+#intro section .intro_box .welcome h4::before {
   content: "";
   width: 350px;
   height: 4px;
   background: #ccc;
   margin-right: 20px;
 }
-#intro .intro_box .welcome h4::after {
+#intro section .intro_box .welcome h4::after {
   content: "";
   width: 350px;
   height: 4px;
   background: #ccc;
   margin-left: 20px;
 }
-#intro button {
+#intro section .intro_bottom {
   margin-top: 163px;
+  text-align: center;
+}
+#intro section .intro_bottom button {
+  display: inline-block;
   background: #3aa551;
   width: 75px;
   height: 75px;
@@ -108,38 +116,42 @@ body h5 {
   justify-content: center;
   align-items: center;
 }
-#main .main_intro {
+#main section {
+  border: 1px solid #0f0;
+  width: 1000px;
+}
+#main section .main_intro {
   text-align: center;
 }
-#main .main_intro h4 {
+#main section .main_intro h4 {
   padding: 22px;
 }
-#main .main_intro h3 {
+#main section .main_intro h3 {
   padding-bottom: 22px;
 }
-#main .main_intro h3 span {
+#main section .main_intro h3 span {
   color: #3aa551;
 }
-#main .main_pic {
+#main section .main_pic {
   width: 100%;
   height: 480px;
   margin: 35px;
 }
-#main .main_pic img {
+#main section .main_pic img {
   display: block;
   margin: 0 auto;
   width: 300px;
   height: 480px;
   background-color: #ccc;
 }
-#main .main_intro_sub {
+#main section .main_intro_sub {
   text-align: center;
 }
-#main .main_bottom {
-  border: 1px solid #00f;
+#main section .main_bottom {
+  margin-top: 20px;
   text-align: center;
 }
-#main .main_bottom button {
+#main section .main_bottom button {
   display: inline-block;
   background: #3aa551;
   width: 75px;
@@ -158,24 +170,30 @@ body h5 {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 1px solid #f00;
 }
-#about_me .about_intro {
+#about_me section {
+  border: 1px solid #0f0;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about_me section .about_intro {
   text-align: center;
   width: 600px;
   height: 150px;
 }
-#about_me .about_intro span {
+#about_me section .about_intro span {
   font-size: 20px;
   text-align: center;
   color: #ccc;
 }
-#about_me .about_intro h2 {
+#about_me section .about_intro h2 {
   display: flex;
   align-items: center;
   position: relative;
 }
-#about_me .about_intro h2::before {
+#about_me section .about_intro h2::before {
   content: "";
   display: block;
   width: 300px;
@@ -183,7 +201,7 @@ body h5 {
   background: #3aa551;
   margin-right: 34px;
 }
-#about_me .about_intro h2::after {
+#about_me section .about_intro h2::after {
   content: "입니다.";
   font-size: 20px;
   color: #ccc;
@@ -191,10 +209,10 @@ body h5 {
   bottom: 10px;
   right: 0;
 }
-#about_me .about_contact {
+#about_me section .about_contact {
   position: absolute;
-  top: 55px;
-  left: 378px;
+  top: 0;
+  left: 0;
   width: 450px;
   height: 330px;
   background: #fff;
@@ -202,44 +220,43 @@ body h5 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 30px;
 }
-#about_me .about_edu {
+#about_me section .about_edu {
   position: absolute;
-  top: 89px;
-  left: 1012px;
+  top: 0;
+  left: 0;
   width: 520px;
   height: 250px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-#about_me .about_values {
+#about_me section .about_values {
   position: absolute;
-  top: 443px;
-  left: 1363px;
+  top: 0;
+  left: 0;
   width: 460px;
   height: 180px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-#about_me .about_values p span {
+#about_me section .about_values p span {
   color: #3aa551;
 }
-#about_me .about_ability {
+#about_me section .about_ability {
   position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
   width: 520px;
   height: 390px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-#about_me .about_favorite {
+#about_me section .about_favorite {
   position: absolute;
-  top: 449px;
-  left: 93px;
+  top: 0;
+  left: 0;
   width: 450px;
   height: 330px;
   background: #fff;
@@ -257,17 +274,28 @@ body h5 {
 #work section {
   display: flex;
   align-items: center;
+  position: relative;
 }
 #work section .work_main {
-  border: 1px solid #f00;
   border-radius: 20px;
   width: 1200px;
   height: 900px;
   margin: 50px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+#work section .work_main img {
+  width: 100%;
+}
+#work section .work_main .box-content {
+  border: 1px solid #f00;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #work section .work_main:hover {
-  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
 }
 #work section .work_right .work_sub1 {
   border: 1px solid #f00;

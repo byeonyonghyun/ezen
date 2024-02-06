@@ -42,43 +42,51 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	.intro_box {
-		width: 1050px;
-		height: 300px;
-		background: #f0f0f0;
-		overflow: hidden;
-		.welcome {
-			display: flex;
-			background: #f0f0f0;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			width: 1050px;
+	section {
+		border: 1px solid #0f0;
+		width: 1000px;
+		.intro_box {
+			width: 1000px;
 			height: 300px;
-			animation: slide 10s infinite steps(8);
-			h4 {
+			background: #f0f0f0;
+			overflow: hidden;
+			.welcome {
 				display: flex;
+				background: #f0f0f0;
+				flex-direction: column;
+				justify-content: center;
 				align-items: center;
-				&::before {
-					content: "";
-					width: 350px;
-					height: 4px;
-					background: #ccc;
-					margin-right: 20px;
-				}
-				&::after {
-					content: "";
-					width: 350px;
-					height: 4px;
-					background: #ccc;
-					margin-left: 20px;
+				width: 1000px;
+				height: 300px;
+				animation: slide 10s infinite steps(8);
+				h4 {
+					display: flex;
+					align-items: center;
+					&::before {
+						content: "";
+						width: 350px;
+						height: 4px;
+						background: #ccc;
+						margin-right: 20px;
+					}
+					&::after {
+						content: "";
+						width: 350px;
+						height: 4px;
+						background: #ccc;
+						margin-left: 20px;
+					}
 				}
 			}
 		}
-	}
-	button {
-		margin-top: 163px;
-		@include btn;
+		.intro_bottom {
+			margin-top: 163px;
+			text-align: center;
+			button {
+				display: inline-block;
+				@include btn;
+			}
+		}
 	}
 }
 @keyframes slide {
@@ -92,39 +100,43 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	.main_intro {
-		text-align: center;
-		h4 {
-			padding: 22px;
-		}
-		h3 {
-			padding-bottom: 22px;
-			span {
-				color: #3aa551;
+	section {
+		border: 1px solid #0f0;
+		width: 1000px;
+		.main_intro {
+			text-align: center;
+			h4 {
+				padding: 22px;
+			}
+			h3 {
+				padding-bottom: 22px;
+				span {
+					color: #3aa551;
+				}
 			}
 		}
-	}
-	.main_pic {
-		width: 100%;
-		height: 480px;
-		margin: 35px;
-		img {
-			display: block;
-			margin: 0 auto;
-			width: 300px;
+		.main_pic {
+			width: 100%;
 			height: 480px;
-			background-color: #ccc;
+			margin: 35px;
+			img {
+				display: block;
+				margin: 0 auto;
+				width: 300px;
+				height: 480px;
+				background-color: #ccc;
+			}
 		}
-	}
-	.main_intro_sub {
-		text-align: center;
-	}
-	.main_bottom {
-		border: 1px solid #00f;
-		text-align: center;
-		button {
-			display: inline-block;
-			@include btn;
+		.main_intro_sub {
+			text-align: center;
+		}
+		.main_bottom {
+			margin-top: 20px;
+			text-align: center;
+			button {
+				display: inline-block;
+				@include btn;
+			}
 		}
 	}
 }
@@ -136,94 +148,99 @@ body {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	border: 1px solid #f00;
-	.about_intro {
-		text-align: center;
-		width: 600px;
-		height: 150px;
-		span {
-			font-size: 20px;
+	section {
+		border: 1px solid #0f0;
+		width: 1000px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.about_intro {
 			text-align: center;
-			color: #ccc;
-		}
-		h2 {
-			display: flex;
-			align-items: center;
-			position: relative;
-			&::before {
-				content: "";
-				display: block;
-				width: 300px;
-				height: 4px;
-				background: #3aa551;
-				margin-right: 34px;
-			}
-			&::after {
-				content: "입니다.";
+			width: 600px;
+			height: 150px;
+			span {
 				font-size: 20px;
+				text-align: center;
 				color: #ccc;
-				position: absolute;
-				bottom: 10px;
-				right: 0;
+			}
+			h2 {
+				display: flex;
+				align-items: center;
+				position: relative;
+				&::before {
+					content: "";
+					display: block;
+					width: 300px;
+					height: 4px;
+					background: #3aa551;
+					margin-right: 34px;
+				}
+				&::after {
+					content: "입니다.";
+					font-size: 20px;
+					color: #ccc;
+					position: absolute;
+					bottom: 10px;
+					right: 0;
+				}
 			}
 		}
-	}
-	.about_contact {
-		position: absolute;
-		top: 55px;
-		left: 378px;
-		width: 450px;
-		height: 330px;
-		background: #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		padding: 30px;
-		div {
+		.about_contact {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 450px;
+			height: 330px;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			padding: 30px;
+			div {
+			}
 		}
-	}
-	.about_edu {
-		position: absolute;
-		top: 89px;
-		left: 1012px;
-		width: 520px;
-		height: 250px;
-		background: #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	}
-	.about_values {
-		position: absolute;
-		top: 443px;
-		left: 1363px;
-		width: 460px;
-		height: 180px;
-		background: #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		p span {
-			color: #3aa551;
+		.about_edu {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 520px;
+			height: 250px;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		}
-	}
-	.about_ability {
-		position: absolute;
-		bottom: 80px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 520px;
-		height: 390px;
-		background: #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	}
-	.about_favorite {
-		position: absolute;
-		top: 449px;
-		left: 93px;
-		width: 450px;
-		height: 330px;
-		background: #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		.about_values {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 460px;
+			height: 180px;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			p span {
+				color: #3aa551;
+			}
+		}
+		.about_ability {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 520px;
+			height: 390px;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		.about_favorite {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 450px;
+			height: 330px;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
 	}
 }
 
@@ -236,15 +253,26 @@ body {
 	section {
 		display: flex;
 		align-items: center;
+		position: relative;
 		.work_main {
-			border: 1px solid #f00;
 			border-radius: 20px;
 			width: 1200px;
 			height: 900px;
 			margin: 50px;
 			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+			img {
+				width: 100%;
+			}
+			.box-content {
+				border: 1px solid #f00;
+				background: #fff;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
 			&:hover {
-				background: rgba(0, 0, 0, 0.4);
+				opacity: 1;
 			}
 		}
 		.work_right {
