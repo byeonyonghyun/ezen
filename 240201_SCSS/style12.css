@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.complet {
+  font-size: 18px;
+  width: 150px;
+  padding: 7px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 2px solid royalblue;
+  color: royalblue;
+}
+.complet.complet:hover {
+  background: royalblue;
+  color: #fff;
+}
+.complet.loading:hover {
+  background: green;
+  color: #fff;
+}
+.complet.error:hover {
+  background: crimson;
+  color: #fff;
+}
+
+.loading {
+  font-size: 18px;
+  width: 150px;
+  padding: 7px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 2px solid green;
+  color: green;
+}
+.loading.complet:hover {
+  background: royalblue;
+  color: #fff;
+}
+.loading.loading:hover {
+  background: green;
+  color: #fff;
+}
+.loading.error:hover {
+  background: crimson;
+  color: #fff;
+}
+
+.error {
+  font-size: 18px;
+  width: 150px;
+  padding: 7px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 2px solid crimson;
+  color: crimson;
+}
+.error.complet:hover {
+  background: royalblue;
+  color: #fff;
+}
+.error.loading:hover {
+  background: green;
+  color: #fff;
+}
+.error.error:hover {
+  background: crimson;
+  color: #fff;
+}/*# sourceMappingURL=style12.css.map */

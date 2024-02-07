@@ -1,0 +1,55 @@
+body {
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.heart-beat {
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	transform: rotate(45deg);
+	box-shadow: 0 -10px 100px #ff4757, 0 -10px 150px #ff4757,
+		0 -10px 200px #ff4757;
+	position: relative;
+	animation: beat linear 0.0005s infinite;
+	&::after {
+		content: "";
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: -50px;
+		left: 0px;
+		background-color: red;
+		border-radius: 50px;
+	}
+	&::before {
+		content: "";
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 0;
+		right: 50px;
+		background-color: red;
+		border-radius: 50px;
+	}
+}
+@keyframes beat {
+	0% {
+		scale: 90%;
+	}
+	25% {
+		scale: 100%;
+	}
+	50% {
+		scale: 110%;
+	}
+	75% {
+		scale: 120%;
+	}
+	100% {
+		scale: 130%;
+	}
+}
