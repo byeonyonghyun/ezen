@@ -164,36 +164,36 @@ body h5 {
 }
 
 #about_me {
-  height: 100vh;
+  height: 600px;
+  display: flex;
+  position: relative;
+}
+#about_me .abuot_left {
+  border: 1px solid #0f0;
+  width: 860px;
+  height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  background: #fff;
 }
-#about_me section {
-  border: 1px solid #0f0;
-  width: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#about_me section .about_intro {
+#about_me .abuot_left .about_intro {
   text-align: center;
   width: 600px;
   height: 150px;
 }
-#about_me section .about_intro span {
+#about_me .abuot_left .about_intro span {
   font-size: 20px;
   text-align: center;
   color: #ccc;
 }
-#about_me section .about_intro h2 {
+#about_me .abuot_left .about_intro h2 {
   display: flex;
   align-items: center;
   position: relative;
 }
-#about_me section .about_intro h2::before {
+#about_me .abuot_left .about_intro h2::before {
   content: "";
   display: block;
   width: 300px;
@@ -201,7 +201,7 @@ body h5 {
   background: #3aa551;
   margin-right: 34px;
 }
-#about_me section .about_intro h2::after {
+#about_me .abuot_left .about_intro h2::after {
   content: "입니다.";
   font-size: 20px;
   color: #ccc;
@@ -209,56 +209,43 @@ body h5 {
   bottom: 10px;
   right: 0;
 }
-#about_me section .about_contact {
+#about_me .abuot_left .about_values p span {
+  color: #3aa551;
+}
+#about_me .abuot_right {
+  width: 2000px;
+  height: 600px;
+  border: 1px solid #0f0;
   position: absolute;
-  top: 0;
-  left: 0;
+}
+#about_me .abuot_right div {
+  float: left;
+}
+#about_me .abuot_right .about_contact {
   width: 450px;
-  height: 330px;
+  height: 350px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 30px;
 }
-#about_me section .about_edu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 520px;
-  height: 250px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-#about_me section .about_values {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 460px;
-  height: 180px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-#about_me section .about_values p span {
-  color: #3aa551;
-}
-#about_me section .about_ability {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 520px;
-  height: 390px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-#about_me section .about_favorite {
-  position: absolute;
-  top: 0;
-  left: 0;
+#about_me .abuot_right .about_edu {
   width: 450px;
-  height: 330px;
+  height: 350px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#about_me .abuot_right .about_ability {
+  width: 450px;
+  height: 350px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#about_me .abuot_right .about_favorite {
+  width: 450px;
+  height: 350px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

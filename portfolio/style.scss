@@ -142,18 +142,18 @@ body {
 }
 
 #about_me {
-	height: 100vh;
+	height: 600px;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	position: relative;
-	section {
+	.abuot_left {
 		border: 1px solid #0f0;
-		width: 1000px;
+		width: 860px;
+		height: inherit;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		background: #fff;
 		.about_intro {
 			text-align: center;
 			width: 600px;
@@ -185,58 +185,46 @@ body {
 				}
 			}
 		}
-		.about_contact {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 450px;
-			height: 330px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			padding: 30px;
-			div {
-			}
-		}
-		.about_edu {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 520px;
-			height: 250px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		}
 		.about_values {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 460px;
-			height: 180px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 			p span {
 				color: #3aa551;
 			}
 		}
+	}
+	.abuot_right {
+		width: 2000px;
+		height: 600px;
+		border: 1px solid #0f0;
+		position: absolute;
+
+		div {
+			float: left;
+		}
+		.about_contact {
+			width: 450px;
+			height: 350px;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			padding: 30px;
+		}
+		.about_edu {
+			width: 450px;
+			height: 350px;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
 		.about_ability {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 520px;
-			height: 390px;
+			width: 450px;
+			height: 350px;
 			background: #fff;
 			border-radius: 20px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		}
 		.about_favorite {
-			position: absolute;
-			top: 0;
-			left: 0;
 			width: 450px;
-			height: 330px;
+			height: 350px;
 			background: #fff;
 			border-radius: 20px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
