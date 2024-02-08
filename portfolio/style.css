@@ -166,34 +166,36 @@ body h5 {
 #about_me {
   height: 600px;
   display: flex;
+  border: 1px solid #0f0;
   position: relative;
 }
-#about_me .abuot_left {
+#about_me .about_left {
   border: 1px solid #0f0;
-  width: 860px;
-  height: inherit;
+  width: 55%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: linear-gradient(to right, #f0f0f0, 98%, transparent);
+  z-index: 999;
 }
-#about_me .abuot_left .about_intro {
+#about_me .about_left .about_intro {
   text-align: center;
   width: 600px;
   height: 150px;
 }
-#about_me .abuot_left .about_intro span {
+#about_me .about_left .about_intro span {
   font-size: 20px;
   text-align: center;
   color: #ccc;
 }
-#about_me .abuot_left .about_intro h2 {
+#about_me .about_left .about_intro h2 {
   display: flex;
   align-items: center;
   position: relative;
 }
-#about_me .abuot_left .about_intro h2::before {
+#about_me .about_left .about_intro h2::before {
   content: "";
   display: block;
   width: 300px;
@@ -201,7 +203,7 @@ body h5 {
   background: #3aa551;
   margin-right: 34px;
 }
-#about_me .abuot_left .about_intro h2::after {
+#about_me .about_left .about_intro h2::after {
   content: "입니다.";
   font-size: 20px;
   color: #ccc;
@@ -209,19 +211,27 @@ body h5 {
   bottom: 10px;
   right: 0;
 }
-#about_me .abuot_left .about_values p span {
+#about_me .about_left .about_values p span {
   color: #3aa551;
 }
-#about_me .abuot_right {
-  width: 2000px;
+#about_me .about_right {
+  width: 45%;
   height: 600px;
   border: 1px solid #0f0;
   position: absolute;
 }
-#about_me .abuot_right div {
-  float: left;
+#about_me .about_right .right_inner {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  top: 25%;
+  overflow: hidden;
 }
-#about_me .abuot_right .about_contact {
+#about_me .about_right .right_inner div {
+  float: left;
+  margin-right: 100px;
+}
+#about_me .about_right .right_inner .about_contact {
   width: 450px;
   height: 350px;
   background: #fff;
@@ -229,26 +239,31 @@ body h5 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 30px;
 }
-#about_me .abuot_right .about_edu {
+#about_me .about_right .right_inner .about_edu {
   width: 450px;
   height: 350px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-#about_me .abuot_right .about_ability {
+#about_me .about_right .right_inner .about_ability {
   width: 450px;
   height: 350px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-#about_me .abuot_right .about_favorite {
+#about_me .about_right .right_inner .about_favorite {
   width: 450px;
   height: 350px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
 }
 
 #work {

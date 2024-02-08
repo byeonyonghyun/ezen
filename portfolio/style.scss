@@ -144,16 +144,18 @@ body {
 #about_me {
 	height: 600px;
 	display: flex;
+	border: 1px solid #0f0;
 	position: relative;
-	.abuot_left {
+	.about_left {
 		border: 1px solid #0f0;
-		width: 860px;
-		height: inherit;
+		width: 55%;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background: #fff;
+		background: linear-gradient(to right, #f0f0f0, 98%, transparent);
+		z-index: 999;
 		.about_intro {
 			text-align: center;
 			width: 600px;
@@ -191,47 +193,57 @@ body {
 			}
 		}
 	}
-	.abuot_right {
-		width: 2000px;
+	.about_right {
+		width: 45%;
 		height: 600px;
 		border: 1px solid #0f0;
 		position: absolute;
-
-		div {
-			float: left;
-		}
-		.about_contact {
-			width: 450px;
-			height: 350px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			padding: 30px;
-		}
-		.about_edu {
-			width: 450px;
-			height: 350px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		}
-		.about_ability {
-			width: 450px;
-			height: 350px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		}
-		.about_favorite {
-			width: 450px;
-			height: 350px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		.right_inner {
+			width: 400%;
+			height: 100%;
+			position: absolute;
+			top: 25%;
+			overflow: hidden;
+			div {
+				float: left;
+				margin-right: 100px;
+			}
+			.about_contact {
+				width: 450px;
+				height: 350px;
+				background: #fff;
+				border-radius: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+				padding: 30px;
+			}
+			.about_edu {
+				width: 450px;
+				height: 350px;
+				background: #fff;
+				border-radius: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+			.about_ability {
+				width: 450px;
+				height: 350px;
+				background: #fff;
+				border-radius: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+			.about_favorite {
+				width: 450px;
+				height: 350px;
+				background: #fff;
+				border-radius: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
 		}
 	}
 }
-
+#app {
+	width: 100%;
+	height: 100vh;
+}
 #work {
 	display: flex;
 	justify-content: center;
