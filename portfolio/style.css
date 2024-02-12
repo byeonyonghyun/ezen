@@ -24,43 +24,37 @@ body {
 }
 body h1 {
   font-size: 150px;
-  font-weight: normal;
 }
 body h2 {
   font-size: 80px;
-  font-weight: normal;
 }
 body h3 {
   font-size: 50px;
-  font-weight: normal;
 }
 body h4 {
   font-size: 30px;
-  font-weight: normal;
 }
 body h5 {
   font-size: 20px;
-  font-weight: normal;
 }
 
-#intro {
+.intro {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#intro section {
-  border: 1px solid #0f0;
+.intro .intro_inner {
   width: 1000px;
 }
-#intro section .intro_box {
+.intro .intro_inner .intro_slide {
   width: 1000px;
   height: 300px;
   background: #f0f0f0;
   overflow: hidden;
 }
-#intro section .intro_box .welcome {
+.intro .intro_inner .intro_slide .welcome {
   display: flex;
   background: #f0f0f0;
   flex-direction: column;
@@ -70,29 +64,29 @@ body h5 {
   height: 300px;
   animation: slide 10s infinite steps(8);
 }
-#intro section .intro_box .welcome h4 {
+.intro .intro_inner .intro_slide .welcome h4 {
   display: flex;
   align-items: center;
 }
-#intro section .intro_box .welcome h4::before {
+.intro .intro_inner .intro_slide .welcome h4::before {
   content: "";
   width: 350px;
   height: 4px;
   background: #ccc;
   margin-right: 20px;
 }
-#intro section .intro_box .welcome h4::after {
+.intro .intro_inner .intro_slide .welcome h4::after {
   content: "";
   width: 350px;
   height: 4px;
   background: #ccc;
   margin-left: 20px;
 }
-#intro section .intro_bottom {
+.intro .intro_inner .intro_btn {
   margin-top: 163px;
   text-align: center;
 }
-#intro section .intro_bottom button {
+.intro .intro_inner .intro_btn button {
   display: inline-block;
   background: #3aa551;
   width: 75px;
@@ -116,84 +110,82 @@ body h5 {
   justify-content: center;
   align-items: center;
 }
-#main section {
-  border: 1px solid #0f0;
+#main .main_inner {
   width: 1000px;
 }
-#main section .main_intro {
+#main .main_inner .main_intro {
   text-align: center;
 }
-#main section .main_intro h4 {
-  padding: 22px;
+#main .main_inner .main_intro h4 {
+  padding: 10px;
+  font-weight: normal;
 }
-#main section .main_intro h3 {
-  padding-bottom: 22px;
+#main .main_inner .main_intro h3 {
+  padding: 10px 0 0 22px;
+  font-weight: normal;
 }
-#main section .main_intro h3 span {
+#main .main_inner .main_intro h3 span {
   color: #3aa551;
 }
-#main section .main_pic {
+#main .main_inner .main_pic {
   width: 100%;
   height: 480px;
-  margin: 35px;
+  margin: 35px 0;
 }
-#main section .main_pic img {
+#main .main_inner .main_pic img {
   display: block;
   margin: 0 auto;
   width: 300px;
   height: 480px;
   background-color: #ccc;
 }
-#main section .main_intro_sub {
+#main .main_inner .main_intro_sub {
   text-align: center;
 }
-#main section .main_bottom {
-  margin-top: 20px;
-  text-align: center;
-}
-#main section .main_bottom button {
-  display: inline-block;
-  background: #3aa551;
-  width: 75px;
-  height: 75px;
-  border: none;
-  border-radius: 75px;
-  font-size: 50px;
-  color: #fff;
-  cursor: pointer;
+#main .main_inner .main_intro_sub h5 {
+  font-weight: normal;
 }
 
-#about_me {
-  height: 100vh;
+.about_me {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.about_me .section_left {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  width: 50%;
+  min-width: 860px;
+  height: 600px;
+  background: linear-gradient(to right, #f0f0f0 80%, transparent);
 }
-#about_me section {
-  border: 1px solid #0f0;
-  width: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about_me .section_left .section_left_intro {
+  width: 600px;
+  height: 300px;
+  margin-left: 130px;
 }
-#about_me section .about_intro {
+.about_me .section_left .section_left_intro .about_intro {
   text-align: center;
   width: 600px;
   height: 150px;
+  margin-bottom: 40px;
 }
-#about_me section .about_intro span {
+.about_me .section_left .section_left_intro .about_intro span {
   font-size: 20px;
   text-align: center;
   color: #ccc;
 }
-#about_me section .about_intro h2 {
+.about_me .section_left .section_left_intro .about_intro h2 {
   display: flex;
   align-items: center;
   position: relative;
 }
-#about_me section .about_intro h2::before {
+.about_me .section_left .section_left_intro .about_intro h2::before {
   content: "";
   display: block;
   width: 300px;
@@ -201,7 +193,7 @@ body h5 {
   background: #3aa551;
   margin-right: 34px;
 }
-#about_me section .about_intro h2::after {
+.about_me .section_left .section_left_intro .about_intro h2::after {
   content: "입니다.";
   font-size: 20px;
   color: #ccc;
@@ -209,123 +201,240 @@ body h5 {
   bottom: 10px;
   right: 0;
 }
-#about_me section .about_contact {
-  position: absolute;
-  top: 0;
-  left: 0;
+.about_me .section_left .section_left_intro .about_values {
+  margin-left: 20px;
+}
+.about_me .section_left .section_left_intro .about_values h4 {
+  margin-left: 10px;
+  margin-bottom: 34px;
+}
+.about_me .section_right {
+  width: 1500px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.about_me .section_right > div {
   width: 450px;
-  height: 330px;
+  height: 350px;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  margin-right: 33px;
 }
-#about_me section .about_edu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 520px;
-  height: 250px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-#about_me section .about_values {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 460px;
-  height: 180px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-#about_me section .about_values p span {
-  color: #3aa551;
-}
-#about_me section .about_ability {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 520px;
-  height: 390px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-#about_me section .about_favorite {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 450px;
-  height: 330px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-#work {
+.about_me .section_right .about_contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  border: 1px solid #f00;
 }
-#work section {
+.about_me .section_right .about_contact .about_inner {
+  width: 374px;
+  height: 287px;
+}
+.about_me .section_right .about_contact .about_inner .name {
+  margin-bottom: 50px;
+}
+.about_me .section_right .about_contact .about_inner .name h4 span {
+  font-size: 20px;
+}
+.about_me .section_right .about_contact .about_inner .contacts {
+  width: 100%;
+  height: 100%;
+}
+.about_me .section_right .about_contact .about_inner .contacts > div {
+  padding: 10px 0;
+}
+.about_me .section_right .about_contact .about_inner .contacts > div > span:nth-of-type(1) {
+  font-size: 24px;
+}
+.about_me .section_right .about_contact .about_inner .contacts > div > span:nth-of-type(2) {
+  font-size: 20px;
+  padding-left: 15px;
+}
+.about_me .section_right .about_edu {
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+.about_me .section_right .about_edu .edu_inner {
+  width: 374px;
+  height: 287px;
+}
+.about_me .section_right .about_edu .edu_inner h4 {
+  margin-bottom: 50px;
+}
+.about_me .section_right .about_edu .edu_inner div p {
+  padding: 10px 0;
+  font-size: 20px;
+}
+.about_me .section_right .about_favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work {
+  width: 100%;
+  height: 900px;
+  margin: 30px 0 0 0;
+}
+.work .work_slide {
   position: relative;
 }
-#work section .work_main {
-  border-radius: 20px;
-  width: 1200px;
-  height: 900px;
-  margin: 50px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+.work .work_slide .slide_wrap {
+  display: flex;
 }
-#work section .work_main img {
+.work .work_slide .slide_wrap .wrapper {
   width: 100%;
 }
-#work section .work_main .box-content {
-  border: 1px solid #f00;
+.work .work_slide .slide_wrap .wrapper .content {
+  position: absolute;
+  bottom: 30px;
+  left: 150px;
+  width: 500px;
+  height: 300px;
   background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+.work .work_slide .slide_wrap .wrapper .content .content_inner {
+  padding: 20px;
+}
+.work .work_slide .slide_wrap .wrapper .content .content_inner h4 {
+  font-size: 40px;
+  padding: 10px;
+}
+.work .work_slide .slide_wrap .wrapper .content .content_inner h5 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #bbb;
+  padding: 10px;
+}
+.work .work_slide .slide_wrap .wrapper .content .content_inner p {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 10px;
+}
+.work .work_slide .slide_wrap .wrapper .yeogi {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  background: url(./img/yeogi.png) top/cover no-repeat;
 }
-#work section .work_main:hover {
-  opacity: 1;
+.work .work_slide .slide_wrap .wrapper .yeogi a {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 900px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
-#work section .work_right .work_sub1 {
-  border: 1px solid #f00;
-  margin-bottom: 80px;
-  width: 380px;
-  height: 280px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+.work .work_slide .slide_wrap .wrapper .yeogi a img {
+  width: 1600px;
+  height: 900px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  transition: all 4s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
-#work section .work_right .work_sub1:hover {
-  background: rgba(0, 0, 0, 0.4);
+.work .work_slide .slide_wrap .wrapper .yeogi a img:hover {
+  -o-object-position: bottom;
+     object-position: bottom;
 }
-#work section .work_right .work_sub2 {
-  border: 1px solid #f00;
-  margin-bottom: 80px;
-  width: 380px;
-  height: 280px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+.work .work_slide .slide_wrap .wrapper .roblox {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  background: url(./img/roblox.PNG) top/cover no-repeat;
 }
-#work section .work_right .work_sub2:hover {
-  background: rgba(0, 0, 0, 0.4);
+.work .work_slide .slide_wrap .wrapper .roblox a {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 900px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
-#work section .work_right .work_sub3 {
-  border: 1px solid #f00;
-  width: 380px;
-  height: 280px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+.work .work_slide .slide_wrap .wrapper .roblox a img {
+  width: 1600px;
+  height: 900px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  transition: all 1s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
-#work section .work_right .work_sub3:hover {
-  background: rgba(0, 0, 0, 0.4);
+.work .work_slide .slide_wrap .wrapper .roblox a:hover {
+  -o-object-position: right;
+     object-position: right;
+}
+.work .work_slide .slide_wrap .wrapper .naver {
+  position: absolute;
+  top: 0;
+  left: 200%;
+  width: 100%;
+  background: url(./img/naver.png) top/cover no-repeat;
+}
+.work .work_slide .slide_wrap .wrapper .naver a {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 900px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+.work .work_slide .slide_wrap .wrapper .naver a img {
+  width: 1600px;
+  height: 900px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  transition: all 4s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.work .work_slide .slide_wrap .wrapper .naver a:hover {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.work .work_slide .slide_wrap .wrapper .bm {
+  position: absolute;
+  top: 0;
+  left: 300%;
+  width: 100%;
+  background: url(./img/bm.png) top/cover no-repeat;
+}
+.work .work_slide .slide_wrap .wrapper .bm a {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 900px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+.work .work_slide .slide_wrap .wrapper .bm a img {
+  width: 600px;
+  height: 900px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  transition: all 4s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.work .work_slide .slide_wrap .wrapper .bm a:hover {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.contact {
+  width: 100%;
+  height: 400px;
+  background: #ddd;
 }/*# sourceMappingURL=style.css.map */
