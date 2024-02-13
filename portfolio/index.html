@@ -4,9 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <!-- jQuery -->
+    <script defer src="./js/jquery-2.1.4.js"></script>
+    <!-- feaderlight -->
+    <link rel="stylesheet" href="./js/feather light/featherlight.css">
+    <script defer src="./js/feather light/featherlight.js"></script>
+    <!-- scrollTo -->
+    <script defer src="./js/scrollTo/jquery.scrollTo.js"></script>
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/6fa801e571.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <!-- custom -->
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
+
+
+    <title>B.Y.H Portfolio</title>
+
 </head>
 
 <body>
@@ -48,7 +62,7 @@
                     </div>
                 </div>
                 <div class="intro_btn">
-                    <button><i class="fa-solid fa-arrow-down"></i></button>
+                    <button><a href="#main"><i class="fa-solid fa-arrow-down"></i></a></button>
                 </div>
             </div>
         </section>
@@ -76,6 +90,7 @@
         </section>
 
 
+        
         <section class="about_me">
             <section class="section_left">
                 <div class="section_left_intro">
@@ -92,6 +107,9 @@
                 </div>
             </section>
             <section class="section_right">
+                <div class="photo">
+                    <img src="" alt="">
+                </div>
                 <div class="about_contact">
                     <div class="about_inner">
                         <div class="name">
@@ -117,6 +135,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="photo">
+                    <img src="" alt="">
+                </div>
                 <div class="about_edu">
                     <div class="edu_inner">
                         <h4>Education</h4>
@@ -128,10 +149,65 @@
                         </div>
                     </div>
                 </div>
+                <div class="photo">
+                    <img src="" alt="">
+                </div>
                 <div class="about_favorite">
                     <h4>My favorite</h4>
                 </div>
+                <div class="photo">
+                    <img src="" alt="">
+                </div>
+                <div class="about_contact">
+                    <div class="about_inner">
+                        <div class="name">
+                            <h4>변용현 <span>Byeon Yong Hyun</span></h4>
+                        </div>
+                        <div class="contacts">
+                            <div class="tel">
+                                <span><i class="fa-solid fa-phone"></i></span>
+                                <span>010.2773.3447</span>
+                            </div>
+                            <div class="email">
+                                <span><i class="fa-regular fa-envelope"></i></span>
+                                <span>yy27809@naver.com</span>
+                            </div>
+                            <div class="git">
+                                <span><i class="fa-brands fa-github"></i></span>
+                                <span>https://github.com/byeonyonghyun</span>
+                            </div>
+                            <div class="insta">
+                                <span><i class="fa-brands fa-instagram"></i></span>
+                                <span>byun.__.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="" alt="">
+                </div>
+                <div class="about_edu">
+                    <div class="edu_inner">
+                        <h4>Education</h4>
+                        <div>
+                            <p>19.2. 화성반월고등학교 졸업</p>
+                            <p>19.3. 나사렛대학교 IT융합학부 <br>
+                                멀티미디어 콘텐츠</p>
+                            <p>24.1. 이젠아카데미 강남캠퍼스</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="" alt="">
+                </div>
+                <div class="about_favorite">
+                    <h4>My favorite</h4>
+                </div>
+                <div class="photo">
+                    <img src="" alt="">
+                </div>
             </section>
+            
         </section>
 
 
@@ -160,6 +236,10 @@
         <section class="work">
             <div class="work_slide">
                 <div class="slide_wrap">
+                    <input type="radio" name="tabmenu" id="tab1" checked>
+                    <input type="radio" name="tabmenu" id="tab2" >
+                    <input type="radio" name="tabmenu" id="tab3" >
+                    <input type="radio" name="tabmenu" id="tab4" >
                     <ul class="wrapper">
                         <li class="yeogi">
                             <a href="#">
@@ -218,12 +298,12 @@
                     </ul>
                 </div>
                 <nav>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <div class="work_btn">
+                        <label for="tab1">여기어때</label></li>
+                        <label for="tab2">로블록스</label></li>
+                        <label for="tab3">네이버</label></li>
+                        <label for="tab4">배달의 민족</label></li>
+                    </div>
                 </nav>
             </div>
         </section>
