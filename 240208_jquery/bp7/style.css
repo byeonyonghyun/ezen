@@ -40,6 +40,163 @@ body {
 	overflow: hidden;
 }
 
+/* Section:home */
+.home-inner {
+	background: #fff;
+	height: 100%;
+}
+.home-inner::before {
+	content: "";
+	background: #000;
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: overlay 1s 2s ease-in-out;
+	animation-fill-mode: both;
+}
+
+@keyframes overlay {
+	0% {
+		width: 0;
+		left: 0;
+	}
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+
+.welcome-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font: 50px/5rem "Source Code Pro";
+	text-align: center;
+	margin: 0;
+	animation: slideup 2s linear;
+	animation-fill-mode: both;
+}
+.welcome-text span {
+	display: block;
+	font-size: 26px;
+}
+.welcome-text span .fas {
+	color: crimson;
+}
+
+@keyframes slideup {
+	0% {
+		opacity: 0;
+		margin-top: 50px;
+	}
+	20% {
+		opacity: 1;
+		margin-top: 0;
+	}
+	80% {
+		opacity: 1;
+		margin-top: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.opacity-image {
+	background: url(./images/section-bg-01.jpg) no-repeat center/cover;
+	height: 100%;
+	opacity: 0;
+	animation: opacity-image 1s 2.7s ease-in;
+	animation-fill-mode: both;
+}
+
+@keyframes opacity-image {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.home-heading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.home-heading span {
+	display: block;
+	font: 600 125px/12rem "montserrat";
+	color: #fff;
+	width: 0;
+	overflow: hidden;
+	animation: reveal 1s 3s ease-in-out;
+	animation-fill-mode: both;
+}
+.home-heading span:nth-child(1) {
+	animation-delay: 3s;
+}
+.home-heading span:nth-child(2) {
+	animation-delay: 3.2s;
+}
+.home-heading span:nth-child(3) {
+	animation-delay: 3.4s;
+}
+
+@keyframes reveal {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+/* Section : about */
+.about-inner {
+	background: #0dace3 url(./images/line-drawing.png) right bottom no-repeat;
+	height: 100%;
+}
+.about-items {
+	width: 45%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	margin-left: 150px;
+}
+.item {
+	margin-bottom: 30px;
+}
+.item img {
+	filter: invert(1);
+	height: 100px;
+	float: left;
+	margin-right: 20px;
+	transition: all 0.5s;
+}
+.item:hover img {
+	filter: invert(0);
+}
+.item h3 {
+	font: 500 28px/1 "montserrat";
+}
+.item:hover h3 {
+	color: #000;
+}
+.item p {
+	font-size: 18px;
+	margin-top: 5px;
+}
 /* ####### Section : Awards ####### */
 
 .awards-inner {
@@ -250,6 +407,7 @@ hr.bar {
 }
 
 /* project */
+
 .project-inner {
 	height: 100%;
 	overflow: hidden;
@@ -329,7 +487,9 @@ input[id="tab2"]:checked ~ .tabs {
 input[id="tab3"]:checked ~ .tabs {
 	margin-left: -200%;
 }
+
 /* project-info */
+
 .project-info {
 	width: 25%;
 	padding: 50px;
@@ -395,6 +555,25 @@ input[id="tab3"]:checked ~ .tabs {
 	top: 0;
 	left: 0;
 	color: #eee;
+}
+
+/* feadtherlight.css */
+
+.featherlight .featherlight-content {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	max-height: 100%;
+}
+.featherlight-content iframe {
+	width: 100%;
+	height: 100%;
+}
+.featherlight .featherlight-close-icon {
+	top: 30px;
+	right: 70px;
+	font-size: 40px;
 }
 /* plan */
 
