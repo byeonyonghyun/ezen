@@ -1,24 +1,82 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@media screen and (max-width:1600px){
+.wrapper img{
+  width: 80% !important;
 }
-
-li {
-  list-style: none;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-@font-face {
-  font-family: pret;
-  src: url(./font/Pretendard-Medium.subset.ttf);
-}
-@media screen and (max-width: 786px) {
-  .wrap {
-    position: static;
+@media screen and (max-width:1440px){
+  .about_me{
+    width: 100%;
+    height: auto !important;
   }
-}/*# sourceMappingURL=responsive.css.map */
+  .section_left{
+    position: static !important;
+    height: auto !important;
+  }
+  .section_left_intro{
+    width: 100%;
+    position: static !important;
+    margin: 0 !important;
+  }
+  .section_right_inner{
+    position: static !important;
+    float: none !important;
+  }
+  .ability{
+    height: auto !important; 
+  }
+  .ability_inner{
+    width: 100%;
+    height: auto !important;
+  }
+  .ability_box{
+    width: 100% !important;
+    margin: 20px !important;
+    float: none !important;
+  }
+  .ability_contants {
+    position: static !important;
+    transform: none !important;
+  }
+}
+
+@media screen and (max-width:786px){
+.wrap{
+  overflow: hidden;
+}
+
+  .intro_inner{
+    width: 100%;
+    height: auto;
+  }
+  .intro_slide{
+    width: 100%;
+    height: auto;
+  }
+  .welcome{
+    width: 100%;
+    height: auto;
+  }
+  .welcome h1{
+    font-size: 100px;
+  }
+  .welcome h4{
+    font-size: 15px;
+  }
+  .welcome h4::after{
+    width: 100px;
+    height: 2px;
+  }
+  .welcome h4::before{
+    width: 150px;
+    height: 2px;
+  }
+
+  .main_inner{
+    scale: 80%;
+  }
+  .wrapper img{
+    width: 100% !important;
+    height: 500px !important;
+    margin-top: 25% !important;
+  }
+}

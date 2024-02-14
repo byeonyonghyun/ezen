@@ -130,19 +130,25 @@ body h5 {
   width: 100%;
   height: 480px;
   margin: 35px 0;
+  overflow: hidden;
 }
 .wrap #main .main_inner .main_pic img {
   display: block;
   margin: 0 auto;
-  width: 300px;
+  width: 400px;
   height: 480px;
-  background-color: #ccc;
+  animation: slideup 2s infinite steps(2);
 }
 .wrap #main .main_inner .main_intro_sub {
   text-align: center;
 }
 .wrap #main .main_inner .main_intro_sub h5 {
   font-weight: normal;
+}
+@keyframes slideup {
+  100% {
+    transform: translateY(-200%);
+  }
 }
 .wrap .about_me {
   width: 100%;
