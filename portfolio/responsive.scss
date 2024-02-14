@@ -1,0 +1,12 @@
+@import "reset";
+@import "font";
+@import "mixin";
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 786px) {
+	.wrap {
+		position: static;
+	}
+}
