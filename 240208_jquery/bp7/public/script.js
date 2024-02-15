@@ -58,7 +58,7 @@ $(".menu a").click(function () {
 });
 
 // scrollTo : header > trigger btn
-$(".menu,.gototop").click(function () {
+$(".menu a,.gototop").click(function () {
   $.scrollTo(this.hash || 0, 900);
 });
 
