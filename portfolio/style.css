@@ -38,12 +38,16 @@ body h5 {
   font-size: 20px;
 }
 
+.wrap {
+  position: relative;
+}
 .wrap .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-bottom: 5000px;
 }
 .wrap .intro .intro_inner {
   width: 1000px;
@@ -82,20 +86,76 @@ body h5 {
   background: #ccc;
   margin-left: 20px;
 }
-.wrap .intro .intro_inner .intro_btn {
+.wrap .intro .intro_btn {
   margin-top: 163px;
+  width: 80px;
+  height: 80px;
   text-align: center;
+  line-height: 80px;
 }
-.wrap .intro .intro_inner .intro_btn button {
-  display: inline-block;
-  background: #3aa551;
-  width: 75px;
-  height: 75px;
-  border: none;
-  border-radius: 75px;
+.wrap .intro .intro_btn a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
   font-size: 50px;
   color: #fff;
+  background: #3aa551;
+  border-radius: 100%;
+  transition: all 0.5s;
   cursor: pointer;
+}
+.wrap .intro .intro_btn a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .intro .intro_btn a i:nth-child(2) {
+  opacity: 0;
+}
+.wrap .intro .intro_btn a i:nth-child(3) {
+  opacity: 0;
+}
+.wrap .intro .intro_btn a i.active:nth-child(1) {
+  opacity: 0;
+}
+.wrap .intro .intro_btn a i.active:nth-child(2) {
+  animation: spin 8s;
+  animation-fill-mode: both;
+}
+.wrap .intro .intro_btn a i.active:nth-child(3) {
+  animation: opacity 0.5s 9s;
+  animation-fill-mode: both;
+}
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  2% {
+    opacity: 1;
+  }
+  3% {
+    transform: rotate(350deg);
+  }
+  40% {
+    transform: rotate(0);
+  }
+  54% {
+    transform: rotate(-1400deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes slide {
   100% {
@@ -150,13 +210,13 @@ body h5 {
     transform: translateY(-200%);
   }
 }
-.wrap .about_me {
+.wrap #about_me {
   width: 100%;
   height: 600px;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
-.wrap .about_me .section_left {
+.wrap #about_me .section_left {
   z-index: 99;
   position: absolute;
   top: 0;
@@ -167,7 +227,7 @@ body h5 {
   height: 1400px;
   background: linear-gradient(to right, #f0f0f0 80%, transparent);
 }
-.wrap .about_me .section_left .section_left_intro {
+.wrap #about_me .section_left .section_left_intro {
   position: sticky;
   top: 30%;
   left: 10%;
@@ -176,23 +236,23 @@ body h5 {
   height: 300px;
   margin: 200px 0 200px 130px;
 }
-.wrap .about_me .section_left .section_left_intro .about_intro {
+.wrap #about_me .section_left .section_left_intro .about_intro {
   text-align: center;
   width: 600px;
   height: 150px;
   margin-bottom: 40px;
 }
-.wrap .about_me .section_left .section_left_intro .about_intro span {
+.wrap #about_me .section_left .section_left_intro .about_intro span {
   font-size: 20px;
   text-align: center;
   color: #ccc;
 }
-.wrap .about_me .section_left .section_left_intro .about_intro h2 {
+.wrap #about_me .section_left .section_left_intro .about_intro h2 {
   display: flex;
   align-items: center;
   position: relative;
 }
-.wrap .about_me .section_left .section_left_intro .about_intro h2::before {
+.wrap #about_me .section_left .section_left_intro .about_intro h2::before {
   content: "";
   display: block;
   width: 300px;
@@ -200,7 +260,7 @@ body h5 {
   background: #3aa551;
   margin-right: 34px;
 }
-.wrap .about_me .section_left .section_left_intro .about_intro h2::after {
+.wrap #about_me .section_left .section_left_intro .about_intro h2::after {
   content: "입니다.";
   font-size: 20px;
   color: #ccc;
@@ -208,20 +268,20 @@ body h5 {
   bottom: 10px;
   right: 0;
 }
-.wrap .about_me .section_left .section_left_intro .about_values {
+.wrap #about_me .section_left .section_left_intro .about_values {
   margin-left: 20px;
 }
-.wrap .about_me .section_left .section_left_intro .about_values h4 {
+.wrap #about_me .section_left .section_left_intro .about_values h4 {
   margin-left: 10px;
   margin-bottom: 34px;
 }
-.wrap .about_me .section_right {
+.wrap #about_me .section_right {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.wrap .about_me .section_right .section_right_inner {
+.wrap #about_me .section_right .section_right_inner {
   position: absolute;
   top: 0;
   right: -180%;
@@ -233,7 +293,7 @@ body h5 {
   animation: slideX 30s linear infinite;
   animation-fill-mode: forwards;
 }
-.wrap .about_me .section_right .section_right_inner > div {
+.wrap #about_me .section_right .section_right_inner > div {
   width: 450px;
   height: 350px;
   background: #fff;
@@ -241,60 +301,60 @@ body h5 {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   margin-right: 33px;
 }
-.wrap .about_me .section_right .section_right_inner .photo img {
+.wrap #about_me .section_right .section_right_inner .photo img {
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 450px;
   height: 350px;
 }
-.wrap .about_me .section_right .section_right_inner .about_contact {
+.wrap #about_me .section_right .section_right_inner .about_contact {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.wrap .about_me .section_right .section_right_inner .about_contact .about_inner {
+.wrap #about_me .section_right .section_right_inner .about_contact .about_inner {
   width: 374px;
   height: 287px;
 }
-.wrap .about_me .section_right .section_right_inner .about_contact .about_inner .name {
+.wrap #about_me .section_right .section_right_inner .about_contact .about_inner .name {
   margin-bottom: 50px;
 }
-.wrap .about_me .section_right .section_right_inner .about_contact .about_inner .name h4 span {
+.wrap #about_me .section_right .section_right_inner .about_contact .about_inner .name h4 span {
   font-size: 20px;
 }
-.wrap .about_me .section_right .section_right_inner .about_contact .about_inner .contacts {
+.wrap #about_me .section_right .section_right_inner .about_contact .about_inner .contacts {
   width: 100%;
   height: 100%;
 }
-.wrap .about_me .section_right .section_right_inner .about_contact .about_inner .contacts > div {
+.wrap #about_me .section_right .section_right_inner .about_contact .about_inner .contacts > div {
   padding: 10px 0;
 }
-.wrap .about_me .section_right .section_right_inner .about_contact .about_inner .contacts > div > span:nth-of-type(1) {
+.wrap #about_me .section_right .section_right_inner .about_contact .about_inner .contacts > div > span:nth-of-type(1) {
   font-size: 24px;
 }
-.wrap .about_me .section_right .section_right_inner .about_contact .about_inner .contacts > div > span:nth-of-type(2) {
+.wrap #about_me .section_right .section_right_inner .about_contact .about_inner .contacts > div > span:nth-of-type(2) {
   font-size: 20px;
   padding-left: 15px;
 }
-.wrap .about_me .section_right .section_right_inner .about_edu {
+.wrap #about_me .section_right .section_right_inner .about_edu {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.wrap .about_me .section_right .section_right_inner .about_edu .edu_inner {
+.wrap #about_me .section_right .section_right_inner .about_edu .edu_inner {
   width: 374px;
   height: 287px;
   padding: 20px;
 }
-.wrap .about_me .section_right .section_right_inner .about_edu .edu_inner h4 {
+.wrap #about_me .section_right .section_right_inner .about_edu .edu_inner h4 {
   margin-bottom: 50px;
 }
-.wrap .about_me .section_right .section_right_inner .about_edu .edu_inner div p {
+.wrap #about_me .section_right .section_right_inner .about_edu .edu_inner div p {
   padding: 10px 0;
   font-size: 20px;
 }
-.wrap .about_me .section_right .section_right_inner .about_favorite {
+.wrap #about_me .section_right .section_right_inner .about_favorite {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,18 +367,18 @@ body h5 {
     transform: translateX(-45%);
   }
 }
-.wrap .ability {
+.wrap #ability {
   width: 100%;
   height: 800px;
 }
-.wrap .ability .ability_inner {
+.wrap #ability .ability_inner {
   height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.wrap .ability .ability_inner .ability_box {
+.wrap #ability .ability_inner .ability_box {
   position: relative;
   float: right;
   width: 50%;
@@ -329,56 +389,85 @@ body h5 {
   margin-right: 100px;
   margin-left: 800px;
 }
-.wrap .ability .ability_inner .ability_box .ability_contants {
+.wrap #ability .ability_inner .ability_box .ability_contants {
   padding: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.wrap .ability .ability_inner .ability_box .ability_contants .design {
+.wrap #ability .ability_inner .ability_box .ability_contants .design {
   text-align: center;
   margin-bottom: 50px;
 }
-.wrap .ability .ability_inner .ability_box .ability_contants .design h4 {
+.wrap #ability .ability_inner .ability_box .ability_contants .design h4 {
   display: block;
   margin-bottom: 10px;
 }
-.wrap .ability .ability_inner .ability_box .ability_contants .design img {
+.wrap #ability .ability_inner .ability_box .ability_contants .design img {
   width: 80px;
   padding: 10px;
 }
-.wrap .ability .ability_inner .ability_box .ability_contants .language {
+.wrap #ability .ability_inner .ability_box .ability_contants .language {
   text-align: center;
   margin-bottom: 50px;
 }
-.wrap .ability .ability_inner .ability_box .ability_contants .language h4 {
+.wrap #ability .ability_inner .ability_box .ability_contants .language h4 {
   display: block;
   margin-bottom: 10px;
 }
-.wrap .ability .ability_inner .ability_box .ability_contants .language img {
+.wrap #ability .ability_inner .ability_box .ability_contants .language img {
   width: 80px;
   padding: 10px;
 }
-.wrap .work {
+.wrap #ability .ability_inner .ability_box .ability_contants h2 {
+  display: block;
+  text-align: center;
+}
+.wrap #ability .ability_inner .ability_box .ability_contants h2 span {
+  display: inline-block;
+}
+.wrap #ability .ability_inner .ability_box .ability_contants h2 span:nth-child(1) {
+  animation: develop 1.5s linear infinite;
+}
+.wrap #ability .ability_inner .ability_box .ability_contants h2 span:nth-child(2) {
+  animation: develop 1.5s linear infinite;
+  animation-delay: 0.25s;
+}
+.wrap #ability .ability_inner .ability_box .ability_contants h2 span:nth-child(3) {
+  animation: develop 1.5s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes develop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.wrap #work {
   height: 100%;
   margin: 30px 0 0 0;
   overflow: hidden;
 }
-.wrap .work .work_slide {
+.wrap #work .work_slide {
   position: relative;
 }
-.wrap .work .work_slide .slide_wrap input {
+.wrap #work .work_slide .slide_wrap input {
   display: none;
 }
-.wrap .work .work_slide .slide_wrap .wrapper {
+.wrap #work .work_slide .slide_wrap .wrapper {
   height: 900px;
   width: 400%;
   display: flex;
   transition: all 1s;
   overflow: hidden;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .content {
+.wrap #work .work_slide .slide_wrap .wrapper .content {
   opacity: 0;
   position: absolute;
   bottom: 90px;
@@ -390,32 +479,32 @@ body h5 {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   transition: all 0.3s;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .content .content_inner {
+.wrap #work .work_slide .slide_wrap .wrapper .content .content_inner {
   padding: 20px;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .content .content_inner h4 {
+.wrap #work .work_slide .slide_wrap .wrapper .content .content_inner h4 {
   font-size: 40px;
   padding: 10px;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .content .content_inner h5 {
+.wrap #work .work_slide .slide_wrap .wrapper .content .content_inner h5 {
   font-size: 30px;
   font-weight: normal;
   color: #bbb;
   padding: 10px;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .content .content_inner p {
+.wrap #work .work_slide .slide_wrap .wrapper .content .content_inner p {
   font-size: 20px;
   font-weight: normal;
   padding: 10px;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .yeogi {
+.wrap #work .work_slide .slide_wrap .wrapper .yeogi {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   background: url(./img/yeogi.png) top/cover no-repeat;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .yeogi a {
+.wrap #work .work_slide .slide_wrap .wrapper .yeogi a {
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -423,7 +512,7 @@ body h5 {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
 }
-.wrap .work .work_slide .slide_wrap .wrapper .yeogi a img {
+.wrap #work .work_slide .slide_wrap .wrapper .yeogi a img {
   width: 1600px;
   height: 900px;
   -o-object-fit: cover;
@@ -433,18 +522,18 @@ body h5 {
   transition: all 4s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
-.wrap .work .work_slide .slide_wrap .wrapper .yeogi a img:hover {
+.wrap #work .work_slide .slide_wrap .wrapper .yeogi a img:hover {
   -o-object-position: bottom;
      object-position: bottom;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .yeogi:hover .content {
+.wrap #work .work_slide .slide_wrap .wrapper .yeogi:hover .content {
   opacity: 1;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .roblox {
+.wrap #work .work_slide .slide_wrap .wrapper .roblox {
   width: 100%;
   background: url(./img/roblox.PNG) top/cover no-repeat;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .roblox a {
+.wrap #work .work_slide .slide_wrap .wrapper .roblox a {
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -452,7 +541,7 @@ body h5 {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
 }
-.wrap .work .work_slide .slide_wrap .wrapper .roblox a img {
+.wrap #work .work_slide .slide_wrap .wrapper .roblox a img {
   width: 1600px;
   height: 900px;
   -o-object-fit: cover;
@@ -462,18 +551,18 @@ body h5 {
   transition: all 1s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
-.wrap .work .work_slide .slide_wrap .wrapper .roblox a img:hover {
+.wrap #work .work_slide .slide_wrap .wrapper .roblox a img:hover {
   -o-object-position: right;
      object-position: right;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .roblox:hover .content {
+.wrap #work .work_slide .slide_wrap .wrapper .roblox:hover .content {
   opacity: 1;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .naver {
+.wrap #work .work_slide .slide_wrap .wrapper .naver {
   width: 100%;
   background: url(./img/naver.png) top/cover no-repeat;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .naver a {
+.wrap #work .work_slide .slide_wrap .wrapper .naver a {
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -481,7 +570,7 @@ body h5 {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
 }
-.wrap .work .work_slide .slide_wrap .wrapper .naver a img {
+.wrap #work .work_slide .slide_wrap .wrapper .naver a img {
   width: 1600px;
   height: 900px;
   -o-object-fit: cover;
@@ -491,18 +580,18 @@ body h5 {
   transition: all 4s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
-.wrap .work .work_slide .slide_wrap .wrapper .naver a img:hover {
+.wrap #work .work_slide .slide_wrap .wrapper .naver a img:hover {
   -o-object-position: bottom;
      object-position: bottom;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .naver:hover .content {
+.wrap #work .work_slide .slide_wrap .wrapper .naver:hover .content {
   opacity: 1;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .bm {
+.wrap #work .work_slide .slide_wrap .wrapper .bm {
   width: 100%;
   background: url(./img/bm.png) top/cover no-repeat;
 }
-.wrap .work .work_slide .slide_wrap .wrapper .bm a {
+.wrap #work .work_slide .slide_wrap .wrapper .bm a {
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -510,7 +599,7 @@ body h5 {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
 }
-.wrap .work .work_slide .slide_wrap .wrapper .bm a img {
+.wrap #work .work_slide .slide_wrap .wrapper .bm a img {
   width: 600px;
   height: 900px;
   -o-object-fit: cover;
@@ -520,25 +609,25 @@ body h5 {
   transition: all 4s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
-.wrap .work .work_slide .slide_wrap .wrapper .bm a img:hover {
+.wrap #work .work_slide .slide_wrap .wrapper .bm a img:hover {
   -o-object-position: bottom;
      object-position: bottom;
 }
-.wrap .work .work_slide nav {
+.wrap #work .work_slide nav {
   width: 100%;
   height: 90px;
   background: #fff;
   display: flex;
   justify-content: center;
 }
-.wrap .work .work_slide nav .work_btn {
+.wrap #work .work_slide nav .work_btn {
   width: 1600px;
   height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.wrap .work .work_slide nav .work_btn label {
+.wrap #work .work_slide nav .work_btn label {
   width: 25%;
   border-right: 1px solid #ddd;
   line-height: 90px;
@@ -549,28 +638,28 @@ body h5 {
   height: 100%;
   cursor: pointer;
 }
-.wrap .work .work_slide nav .work_btn label:last-child {
+.wrap #work .work_slide nav .work_btn label:last-child {
   border: none;
 }
-.wrap .work .work_slide nav .work_btn label:hover {
+.wrap #work .work_slide nav .work_btn label:hover {
   font-weight: bold;
 }
-.wrap .work .work_slide input[id=tab1]:checked ~ nav label[for=tab1] {
+.wrap #work .work_slide input[id=tab1]:checked ~ nav label[for=tab1] {
   font-weight: bold;
 }
-.wrap .work .work_slide input[id=tab1]:checked ~ .yeogi .content {
+.wrap #work .work_slide input[id=tab1]:checked ~ .yeogi .content {
   opacity: 1;
 }
-.wrap .work .work_slide input[id=tab1]:checked ~ .wrapper {
+.wrap #work .work_slide input[id=tab1]:checked ~ .wrapper {
   margin-left: 0;
 }
-.wrap .work .work_slide input[id=tab2]:checked ~ .wrapper {
+.wrap #work .work_slide input[id=tab2]:checked ~ .wrapper {
   margin-left: -100%;
 }
-.wrap .work .work_slide input[id=tab3]:checked ~ .wrapper {
+.wrap #work .work_slide input[id=tab3]:checked ~ .wrapper {
   margin-left: -200%;
 }
-.wrap .work .work_slide input[id=tab4]:checked ~ .wrapper {
+.wrap #work .work_slide input[id=tab4]:checked ~ .wrapper {
   margin-left: -300%;
 }
 .wrap .contact {
@@ -586,4 +675,55 @@ body h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.wrap .nav_btn {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99995;
+}
+.wrap .nav_btn a {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  color: #fff;
+  transition: all 0.5s;
+  background: #3aa551;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.wrap .nav_btn a.active {
+  opacity: 1;
+}
+.wrap .nav_btn a.active:nth-child(2) {
+  top: -90px;
+}
+.wrap .nav_btn a.active:nth-child(3) {
+  top: -180px;
+}
+.wrap .nav_btn a.active:nth-child(4) {
+  top: -270px;
+}
+.wrap .nav_btn .plus {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 100%;
+  background: #3aa551;
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

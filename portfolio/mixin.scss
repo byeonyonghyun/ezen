@@ -1,12 +1,7 @@
 @mixin btn {
 	background: #3aa551;
-	width: 75px;
-	height: 75px;
-	border: none;
-	border-radius: 75px;
 	font-size: 50px;
 	color: #fff;
-	cursor: pointer;
 }
 
 @mixin box {

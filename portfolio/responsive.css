@@ -10,10 +10,10 @@
 	.main_intro_sub {
 		margin-bottom: 150px !important;
 	}
-	.about_me {
+	#about_me {
 		border-top: 1px solid #ddd;
 		width: 100%;
-		height: auto !important;
+		height: 100% !important;
 	}
 	.section_left {
 		width: 100% !important;
@@ -35,7 +35,7 @@
 		position: static !important;
 		float: none !important;
 	}
-	.ability {
+	#ability {
 		height: auto !important;
 	}
 	.ability_inner {
@@ -91,7 +91,4 @@
 	.contact_inner h2 {
 		font-size: 60px;
 	}
-}
-
-@media screen and (max-width: 500px) {
 }
