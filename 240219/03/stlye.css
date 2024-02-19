@@ -1,0 +1,20 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+#galleryZone {
+	border: 1px solid #f00;
+	text-align: center;
+}
+
+button {
+	border: none;
+	background: #ddd;
+	width: 100px;
+}
+button:hover {
+	background: #ccc;
+}
