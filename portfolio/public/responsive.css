@@ -1,0 +1,94 @@
+@media screen and (max-width: 1600px) {
+	.wrapper img {
+		width: 80% !important;
+	}
+}
+@media screen and (max-width: 1440px) {
+	.intro {
+		margin: 80px 0;
+	}
+	.main_intro_sub {
+		margin-bottom: 150px !important;
+	}
+	#about_me {
+		border-top: 1px solid #ddd;
+		width: 100%;
+		height: auto !important;
+	}
+	.section_left {
+		width: 100% !important;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 150px;
+		position: static !important;
+		height: auto !important;
+		background: none;
+	}
+	.section_left_intro {
+		width: 100%;
+		position: static !important;
+		margin: 0 !important;
+	}
+	.section_right_inner {
+		position: static !important;
+		float: none !important;
+	}
+	#ability {
+		height: auto !important;
+	}
+	.ability_inner {
+		width: 100%;
+		height: auto !important;
+	}
+	.ability_box {
+		width: 100% !important;
+		margin: 20px !important;
+		float: none !important;
+	}
+	.ability_contants {
+		position: static !important;
+		transform: none !important;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.wrap {
+		overflow: hidden;
+	}
+	.welcome {
+		width: 100%;
+		height: auto;
+	}
+	.welcome h1 {
+		font-size: 100px;
+	}
+	.welcome h4 {
+		font-size: 15px;
+	}
+	.welcome h4::after {
+		width: 100px;
+		height: 2px;
+	}
+	.welcome h4::before {
+		width: 150px;
+		height: 2px;
+	}
+
+	.main_inner {
+		scale: 80%;
+	}
+	.wrapper img {
+		width: 100% !important;
+		height: 500px !important;
+		margin-top: 25% !important;
+	}
+
+	.contact_inner {
+		width: 100%;
+	}
+	.contact_inner h2 {
+		font-size: 60px;
+	}
+}

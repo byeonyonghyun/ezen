@@ -1,0 +1,32 @@
+5.제어문
+-조건문
+>if문
+>if else문 (else if)
+>switch문
+
+-반복문
+>for문
+>forEach문
+>for in문
+>for of문
+>while문
+>do while문
+(break문 & continue문)
+
+오픈 그래프: 다른 누군가에게 URL 공유
+대표이미지/설명
+
+1.컴퓨터 => 무조건 node설치 터미널 node -v 버전체크
+구글  node.js LTS
+
+2.firebase
+로그인
+3.프로젝트 추가 "+"
+프로젝트만들기
+빌드
+호스팅
+시작하기
+cli주소복사
+cmd 관리자 권한으로 실행
+주소 붙여넣기
+
