@@ -12,13 +12,17 @@
 </head>
 
 <body>
-  <h1>To Do list</h1>
-  <form action="https:localhost:3000/todolist.js" method="post">
-    <input type="text" id="todo" placeholder="오늘 할 일을 입력하세요">
-    <input type="submit" id="add" value="등록">
-  </form>
-  <ul>
-  </ul>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <form name="testForm" action="https://localhost:3000/calc.jr" method="post">
+      <label for="height">Height (cm)</label>
+      <input id="height" type="number">
+      <label for="weight">Weight (kg)</label>
+      <input id="weight" type="number">
+      <input type="submit" value="Claculate">
+    </form>
+    <div class="result">result</div>
+  </div>
 </body>
 
 </html>

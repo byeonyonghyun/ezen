@@ -1,30 +1,58 @@
-//인풋요소 가져오기
-// 등록버튼 가져오기
-// 입력값을 받음
-// 버튼을 누르면 할일이 추가가됨
-// 아래쪽에 할 일 내용표시
+// 키170 => 몸무게/(170/100 =>제곱 )
+// 몸무게 73
+// 73 / (1.7 * 1.7)
 
-// 1.사용자가 입력하는 값을 찾아오기 위해 입력창 정의
-// 2.사용자가 클릭할 버튼 정의
-// 3.버튼을 클릭했을 때 이벤트에 대한 기능 정의(함수)
-// li태그 DOM생성 => 입력창을 통해서 전달받은 값을 ㅣㅑ태그 삽입=>ul태그 자식요소
-// 4.사용자가 입력한 값을 출력할 공간에 대한 정의
+// 1. 몸무게와 키 입력값을 받아온다.
+// 2. BMI를 계산하는 버튼을 가져온다.
+// 3.결과값이 나타날 수 있는 result값을 가져온다.
+// 4. BMI계산함수를 입력한다.
+// 5.결과값을 result에 넣는다
 
-const todo = document.querySelector("#todo");
-const add = document.querySelector("#add");
-// document.querySelector("form")=> form태그를 찾아와서 onsubmit이벤트태그를 지정해도 된다.
-const list = document.querySelector("ul");
 
-const formFnc = (e) => {
-  e.preventDefault();
-  if (todo.value !== "") {
-    const li = document.createElement("li");//li태그 만들기
-    li.innerText = todo.value;//아래에서 value값을 텍스트로 li에 넣기
-    list.appendChild(li);
-    todo.value = "";//input값 초기화
-    const text = todo.value;//value는 이벤트가 작동해야지만 값이 나온다.
+const calc = document.querySelector("form input[type='submit']");
+
+
+
+
+
+
+const display = (bmi) => {
+  const result = document.querySelector(".result");
+  let group;
+  if (bmi >= 30) {
+    group = "중등도 비만";
+  } else if (bmi >= 25) {
+    group = "경도비만";
+  } else if (bmi >= 23) {
+    group = "과체중";
+  } else if (bmi >= 18.5) {
+    group = "정상";
+  } else {
+    group = "저체중";
   }
+
+  result.innerText = `${bmi} = ${group}입니다`
 };
 
+const bmiCalc = (e) => {
+  e.preventDefault();
+  const heightInput = document.querySelector("#height");
+  const weightInput = document.querySelector("#weight");
 
-add.onclick = formFnc;
+  if (weightInput.value != "" && heightInput.value != "") {
+
+    const height = heightInput.value / 100;
+    const weight = weightInput.value;
+    const bmi = calculate(weight, height);
+
+    display(bmi);
+  }
+  heightInput.value = "";
+  weightInput.value = "";
+};
+
+const calculate = (weight, height) => {
+  return (weight / (height * height)).toFixed(1);
+};
+calc.onclick = bmiCalc;
+
