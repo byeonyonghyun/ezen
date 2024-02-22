@@ -11,11 +11,6 @@
 
 const calc = document.querySelector("form input[type='submit']");
 
-
-
-
-
-
 const display = (bmi) => {
   const result = document.querySelector(".result");
   let group;
@@ -54,5 +49,6 @@ const bmiCalc = (e) => {
 const calculate = (weight, height) => {
   return (weight / (height * height)).toFixed(1);
 };
+
 calc.onclick = bmiCalc;
 

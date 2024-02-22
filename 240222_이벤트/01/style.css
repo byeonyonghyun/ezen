@@ -1,0 +1,19 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+#container {
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+#box {
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
