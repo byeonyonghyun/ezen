@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <didv id="containner">
+    <h1>Book List</h1>
+    <form name="testForm" action="hrrps://localhost:3000/" method="post">
+      <ul id="bookinfo">
+        <li>
+          <label for="title">제목</label>
+          <input type="text" id="title">
+        </li>
+        <li>
+          <label for="author">저자</label>
+          <input type="text" id="author">
+        </li>
+      </ul>
+      <input class="btn" type="reset" value="취소하기">
+      <input id="save" class="btn" type="submit" value="저장하기">
+    </form>
+    <ul id="booklist">
+    </ul>
+  </didv>
+</body>
+
+</html>
