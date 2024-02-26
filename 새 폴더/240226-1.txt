@@ -1,0 +1,13 @@
+-혼자 작업한 데이터를 깃허브에 커밋하는 법만 배움
+1. 회사에 취업 시, github
+2. 브랜치 : 레포지토리 : 마스터
+git checkout -b freshman
+git push origin freshman
+
+3. 사수 부사수
+=> 대표 및 직원 간 1:1
+=> 커밋 & 병합
+
+그룹 프로젝트
+
+>master / develop / feature

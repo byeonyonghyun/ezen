@@ -1,0 +1,55 @@
+10.객체
+
+window = 웹 브라우저 안에 있는 최상위 "객체"=(전역 객체)-생략가능
+>내장 객체 : window 안에 기본적으로 탑재되어있는 객체 => 사람들이 다쓰는데 그냥 미리 깔아놓자!
+
+window에서 자주 사용하는 프로퍼티
+
+document = 웹 브라우저에 출력될 문서 => html > body
+innerHeight = 문서 내용의 높이를 의미
+innerWidth = 문서 내용의 너비를 의미
+outerHeight = 웹 브라우저 창의 높이
+outerWidth = 웹 브라우저 창의 너비
+screenX = 모니터의 왼쪽으로부터 떨어진 지점의 x좌표값
+screenY= 모니터의 상단으로부터 떨어진 지점의 Y좌표값
+scrollX(pageXOffset) = 스크롤 시, 수평으로 이동한 만큼의 X좌표값
+scrollY(pageYOffset)= 스크롤 시, 수직으로 이동한 만큼의 Y좌표값
+localStorage = 웹 브라우저에서 생성되는 데이터를 저장할 수 있도록 해주는 프로퍼티 (웹 브라우저가 종료되어도 데이터가 존재)
+sessionStorage = 웹 브라우저에서 생성되는 데이터를 저장할 수 있도록 해주는 프로퍼티 (웹 브라우저가 종료/새로고침 즉시 데이터 리셋)
+location = window객체의 현 위치를 URL로 표기
+
+
+window에서 자주 사용하는 메서드(함수)
+
+alert() = 알림창
+prompt() = 사용자로부터 입력된 텍스트를 사용하고자 할 때
+focus() = 특정 윈도우 창에 마우스커서가 위치했을때
+open() = 새로운 창을 열고자 할 때
+close() = 현재 열려있는 창을 닫고자 할 때
+confirm() = 확인 및 취소 버튼이 있는 확인 창을 표시
+print() = 현재 웹 브라우저 문서를 출력하고자 할 때
+scroll() = 문서에서 특정 위치로 스크롤 하고자 할 때
+scrollTo() = 문서에서 지정한 위치까지 한번에 스크롤
+stop() = 웹 문서 로딩을 멈추게하고 싶을 때
+
+Date() 포로토타입을 통해서 생성되는 인트턴스 객체가 사용할 수 있는 메서드()
+
+getFullYear() 연도값을 가져옴
+getNonth() 월값을 가져옴(0~11 / 0=> 1월)
+getDate() 일값을 가져옴 (1~31)
+getDay() 요일값을 가져옴 (0~6 / 0=> 일요일)
+getTime() 시간값을 가져옴 (1970년 1월 1일 ~ 현시점까지의 시간 / ms단위)
+getHours() 시 값
+getMinutes() 분 값
+getSeconds() 초 값
+
+setFullYear() 연도값을 설정함
+setNonth() 월값을 설정함(0~11 / 0=> 1월)
+setDate() 일값을 설정함 (1~31)
+setDay() 요일값을 설정함 (0~6 / 0=> 일요일)
+setTime() 시간값을 설정함 (1970년 1월 1일 ~ 현시점까지의 시간 / ms단위)
+setHours() 시 값 설정
+setMinutes() 분 값 설정
+setSeconds() 초 값 설정
+
+Math(수학객체)

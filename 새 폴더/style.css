@@ -1,0 +1,55 @@
+@font-face {
+	font-family: "notosans";
+	src: url(./font/Noto\ Sans\ KR);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	font-family: "notosans";
+	color: #ff4713;
+	letter-spacing: -1.5px;
+}
+
+#wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #f7f6f3;
+	padding-top: 180px;
+}
+
+#title {
+	width: 100%;
+	color: #ff4713;
+}
+.title_inner {
+	width: 80%;
+	margin: 0 auto;
+}
+.title_inner h1 {
+	font-size: 65px;
+	line-height: 100px;
+}
+.title_inner > div {
+	display: flex;
+	justify-content: center;
+	margin: 60px 0;
+}
+.title_inner h4 {
+	border-top: 0.5px solid #ff4713;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.5;
+	opacity: 0.5;
+}
