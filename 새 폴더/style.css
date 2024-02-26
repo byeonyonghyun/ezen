@@ -2,7 +2,7 @@
 	font-family: "notosans";
 	src: url(./font/Noto\ Sans\ KR);
 }
-
+/* reset */
 * {
 	margin: 0;
 	padding: 0;
@@ -17,8 +17,9 @@ a {
 body {
 	font-family: "notosans";
 	color: #ff4713;
-	letter-spacing: -1.5px;
+	letter-spacing: -2px;
 }
+
 
 #wrap {
 	display: flex;
@@ -29,6 +30,7 @@ body {
 	padding-top: 180px;
 }
 
+/* title */
 #title {
 	width: 100%;
 	color: #ff4713;
@@ -40,6 +42,7 @@ body {
 .title_inner h1 {
 	font-size: 65px;
 	line-height: 100px;
+	font-weight: bold;
 }
 .title_inner > div {
 	display: flex;
@@ -52,4 +55,184 @@ body {
 	font-weight: bold;
 	line-height: 1.5;
 	opacity: 0.5;
+}
+
+
+/* 매장 찾기 */
+
+.store_search{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-top: 0.5px solid #dfdfe0;
+	border-bottom: 0.5px solid #dfdfe0;
+}
+.store_search_inner{
+	width: 100%;
+}
+.store_search_left{
+	float: left;
+	width: 50%;
+	height: 450px;
+	background: url(./img/c-location-map.png) center/cover no-repeat;
+}
+.store_search_right{
+	float: right;
+	width: 50%;
+	height: 450px;
+	padding: 50px 8%;
+}
+.store_search_right_inner{
+	height: 100%;
+}
+.store_search_right_inner h3{
+	font-size: 16px;
+	font-weight: 500;
+}
+.store_search_locate{
+	width: 100%;
+}
+.store_search_locate p {
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.store_search_locate_city{
+	width: 360px;
+	height: 38px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 22px;
+}
+.store_search_locate_city > div {
+	width: 290px;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.store_search_locate_city select {
+	width: 140px;
+	height: 100%;
+	border: 1px solid #dfdfe0;
+	border-radius: 5px;
+	background: none;
+	color: #ff4713;
+}
+.store_search_locate_name{
+	width: 360px;
+	height: 38px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+}
+.store_search_locate_name > form {
+	width: 290px;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.store_search_locate_name #store_name {
+	width: 242px;
+	height: 100%;
+	border: 1px solid #dfdfe0;
+	border-radius: 5px;
+	background: none;
+	padding: 0 10px;
+}
+.store_search_locate_name #store_name:focus{
+	outline: none;
+}
+.store_search_locate_name #store_submit{
+	width: 38px;
+	height: 38px;
+	border: none;
+	border-radius: 5px;
+	background: #ff4713;
+}
+.store_search_service {
+	margin-top: 60px;
+}
+.store_search_service_inner{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 22px;
+}
+.store_search_service_inner > div {
+	width: 360px;
+	height: 18px;
+	margin-bottom: 18px;
+}
+.store_search_service_inner span {
+	display: inline-block;
+	width: 50%;
+	height: 18px;
+	float: left;
+}
+.store_search_service_inner input[type="checkbox"] {
+	display: none;
+}
+.store_search_service_inner input[type="checkbox"]+label{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #dfdfe0;
+	border-radius: 2px;
+	position: relative;
+}
+.store_search_service_inner input[type="checkbox"]:checked+label::after{
+	content: "";
+	width: 17px;
+	height: 17px;
+	text-align: center;
+	color: #fff;
+	border: none;
+	border-radius: 2px;
+	background: #ff4713;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.store_search_service_inner label {
+	display: inline-block;
+	height: 18px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 18px;
+	padding-left: 10px;
+}
+.store_search_service_inner img {
+	width: 18px;
+	height: 18px;
+}
+
+/* 매장안내 */
+.store_info{
+	width: 1200px;
+	margin-top: 120px;
+}
+.store_info h2 {
+	text-align: center;
+	margin-bottom: 41px;
+}
+.store_info table {
+	width: 100%;
+}
+.store_nm{
+
+}
+.store_loc{
+
+}
+.store_adr{
+
+}
+.store_tel{
+
+}
+.store_srv{
+	
 }
