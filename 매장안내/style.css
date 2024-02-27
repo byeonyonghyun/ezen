@@ -20,7 +20,6 @@ body {
 	letter-spacing: -2px;
 }
 
-
 #wrap {
 	display: flex;
 	flex-direction: column;
@@ -57,39 +56,38 @@ body {
 	opacity: 0.5;
 }
 
-
 /* 매장 찾기 */
 
-.store_search{
+.store_search {
 	width: 1200px;
 	margin: 0 auto;
 	overflow: hidden;
 	border-top: 0.5px solid #dfdfe0;
 	border-bottom: 0.5px solid #dfdfe0;
 }
-.store_search_inner{
+.store_search_inner {
 	width: 100%;
 }
-.store_search_left{
+.store_search_left {
 	float: left;
 	width: 50%;
 	height: 450px;
 	background: url(./img/c-location-map.png) center/cover no-repeat;
 }
-.store_search_right{
+.store_search_right {
 	float: right;
 	width: 50%;
 	height: 450px;
 	padding: 50px 8%;
 }
-.store_search_right_inner{
+.store_search_right_inner {
 	height: 100%;
 }
-.store_search_right_inner h3{
+.store_search_right_inner h3 {
 	font-size: 16px;
 	font-weight: 500;
 }
-.store_search_locate{
+.store_search_locate {
 	width: 100%;
 }
 .store_search_locate p {
@@ -97,7 +95,7 @@ body {
 	font-size: 14px;
 	font-weight: bold;
 }
-.store_search_locate_city{
+.store_search_locate_city {
 	width: 360px;
 	height: 38px;
 	display: flex;
@@ -117,9 +115,16 @@ body {
 	border: 1px solid #dfdfe0;
 	border-radius: 5px;
 	background: none;
+	font-size: 14px;
+	font-weight: normal;
 	color: #ff4713;
+	padding: 10px;
+	cursor: pointer;
 }
-.store_search_locate_name{
+.store_search_locate_city select:focus {
+	outline: none;
+}
+.store_search_locate_name {
 	width: 360px;
 	height: 38px;
 	display: flex;
@@ -141,20 +146,21 @@ body {
 	background: none;
 	padding: 0 10px;
 }
-.store_search_locate_name #store_name:focus{
+.store_search_locate_name #store_name:focus {
 	outline: none;
 }
-.store_search_locate_name #store_submit{
+.store_search_locate_name #store_submit {
 	width: 38px;
 	height: 38px;
 	border: none;
 	border-radius: 5px;
-	background: #ff4713;
+	background: #ff4713 url(./img/c-search-ic.svg) center no-repeat;
+	cursor: pointer;
 }
 .store_search_service {
 	margin-top: 60px;
 }
-.store_search_service_inner{
+.store_search_service_inner {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -175,15 +181,16 @@ body {
 .store_search_service_inner input[type="checkbox"] {
 	display: none;
 }
-.store_search_service_inner input[type="checkbox"]+label{
+.store_search_service_inner input[type="checkbox"] + label {
 	display: inline-block;
 	width: 18px;
 	height: 18px;
 	border: 1px solid #dfdfe0;
 	border-radius: 2px;
 	position: relative;
+	cursor: pointer;
 }
-.store_search_service_inner input[type="checkbox"]:checked+label::after{
+.store_search_service_inner input[type="checkbox"]:checked + label::after {
 	content: "";
 	width: 17px;
 	height: 17px;
@@ -191,7 +198,7 @@ body {
 	color: #fff;
 	border: none;
 	border-radius: 2px;
-	background: #ff4713;
+	background: #ff4713 url(./img/c-check-ic.svg) center no-repeat;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -203,6 +210,7 @@ body {
 	font-weight: bold;
 	line-height: 18px;
 	padding-left: 10px;
+	cursor: pointer;
 }
 .store_search_service_inner img {
 	width: 18px;
@@ -210,29 +218,89 @@ body {
 }
 
 /* 매장안내 */
-.store_info{
+.store_info {
 	width: 1200px;
 	margin-top: 120px;
+	margin-bottom: 60px;
 }
-.store_info h2 {
+.store_info caption {
 	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
 	margin-bottom: 41px;
 }
 .store_info table {
 	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	font-size: 14px;
+	font-weight: 700;
 }
-.store_nm{
+.store_info thead {
+	width: 100%;
+	height: 60px;
+	border: 1px solid #ff4713;
+	border-left: none;
+	border-right: none;
+}
+.store_info tbody tr {
+	width: 100%;
+	height: 80px;
+	border-bottom: 0.5px solid rgba(255, 71, 19, 0.2);
+}
+.store_info {
+	border-bottom: 1px solid #ff4713;
+}
+.store_nm {
+	width: 20%;
+}
+.store_loc {
+	width: 5%;
+}
+.store_adr {
+	width: 45%;
+}
+.store_tel {
+	width: 15%;
+}
+.store_srv {
+	width: 15%;
+}
 
+/* page number */
+.page_number {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 196px;
 }
-.store_loc{
-
+.page_number a {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 12px;
+	color: #ff4713;
 }
-.store_adr{
-
+.page_number a.active {
+	content: "";
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 12px;
+	color: #fff;
+	background: #ff4713;
+	border-radius: 100%;
 }
-.store_tel{
-
-}
-.store_srv{
-	
+.page_number span {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 12px;
+	color: #ff4713;
+	cursor: pointer;
 }
