@@ -1,24 +1,5 @@
-@font-face {
-	font-family: "notosans";
-	src: url(./font/Noto\ Sans\ KR);
-}
-/* reset */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-li {
-	list-style: none;
-}
-a {
-	text-decoration: none;
-}
-body {
-	font-family: "notosans";
-	color: #ff4713;
-	letter-spacing: -2px;
-}
+@import url(./mediaquery.css);
+@import url(./reset.css);
 
 #wrap {
 	display: flex;
@@ -60,13 +41,16 @@ body {
 
 .store_search {
 	width: 1200px;
+	height: 100%;
 	margin: 0 auto;
 	overflow: hidden;
-	border-top: 0.5px solid #dfdfe0;
-	border-bottom: 0.5px solid #dfdfe0;
 }
 .store_search_inner {
+	border-top: 1px solid #dfdfe0;
+	border-bottom: 1px solid #dfdfe0;
 	width: 100%;
+	height: 452px;
+	padding: 0;
 }
 .store_search_left {
 	float: left;
@@ -220,6 +204,8 @@ body {
 /* 매장안내 */
 .store_info {
 	width: 1200px;
+	width: 100%;
+	padding: 0;
 	margin-top: 120px;
 	margin-bottom: 60px;
 }
@@ -247,9 +233,6 @@ body {
 	width: 100%;
 	height: 80px;
 	border-bottom: 0.5px solid rgba(255, 71, 19, 0.2);
-}
-.store_info {
-	border-bottom: 1px solid #ff4713;
 }
 .store_nm {
 	width: 20%;
