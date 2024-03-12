@@ -1,0 +1,11 @@
+#container {
+	width: 400px;
+	margin: 40px auto;
+}
+h1 {
+	text-align: center;
+	font-size: 1.5rem;
+}
+#result {
+	width: 100%;
+}
