@@ -1,0 +1,9 @@
+h1 {
+	position: absolute;
+	top: 120px;
+	left: 40px;
+	z-index: 999;
+	padding: 7px 24px;
+	background: crimson;
+	border-radius: 8px;
+}
