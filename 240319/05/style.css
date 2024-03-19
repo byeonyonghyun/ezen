@@ -1,0 +1,59 @@
+@import url("./reset.css");
+
+body {
+	background: linear-gradient(
+			150deg,
+			#13f0cf,
+			#6d016d,
+			#220340,
+			#220349,
+			#000
+		)
+		no-repeat;
+	overflow-x: hidden;
+}
+.progressWrap {
+	width: 100%;
+	height: 5px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #2d9c9a;
+}
+.bar {
+	width: 0%;
+	height: 100%;
+	background: #fff;
+	transition: width 0.4s;
+}
+.submarine {
+	width: 120px;
+	position: fixed;
+	top: 5%;
+	z-index: 10;
+	transition: all 0.3s;
+}
+.octo {
+	width: 300px;
+	position: fixed;
+	right: 0;
+	bottom: -150px;
+	z-index: 1;
+	opacity: 0.4;
+	transition: all 2s;
+}
+.depthWrap {
+	position: fixed;
+	bottom: 50px;
+	width: 100%;
+	text-align: center;
+	font: bold 20px/1 "arial";
+	color: #fff;
+	border-bottom: 2px dashed #fff;
+	padding-bottom: 10px;
+}
+.depthWrap span {
+	display: inline-block;
+	width: 40px;
+	font-size: 35px;
+}
