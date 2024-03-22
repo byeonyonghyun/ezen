@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body {
+	width: 300vw;
+	height: 100vh;
+	overflow: hidden;
+}
+main {
+	width: 100%;
+	height: 100%;
+}
+nav {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	background: rgba(0, 0, 0, 0.3);
+}
+nav a {
+	font-size: 20px;
+	color: #fff;
+	transition: all 0.3s;
+}
+nav a:hover {
+	color: crimson;
+}
+.slide {
+	width: 100vw;
+	height: 100%;
+	position: relative;
+	float: left;
+	transition: all 0.5s;
+}
+h1 {
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	transform: translate(-50%, -500%);
+	font-size: 80px;
+	color: #fff;
+	transition: all 2s;
+}
+.slide.active h1 {
+	transform: translate(-50%, 0);
+}
+.graphic {
+	background: url(./images/photo-01.jpg) center/cover no-repeat;
+}
+.graphic .dimd {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #ffff00, transparent);
+}
+.web {
+	background: url(./images/photo-02.jpg) center/cover no-repeat;
+}
+.web .dimd {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #ff0000, transparent);
+}
+
+.Logo {
+	background: url(./images/photo-03.jpg) center/cover no-repeat;
+}
+.Logo .dimd {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #0000ff, transparent);
+}
