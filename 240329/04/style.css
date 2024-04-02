@@ -154,7 +154,7 @@ transform: rotate(-135deg);
   transition: all 0.2s;
 }
 #sec2 .inner img{
-  width: 800px;
+  width: 500px;
   opacity: 0;
   transform: translateY(-50px);
 }
@@ -233,4 +233,71 @@ transform: rotate(-135deg);
 .slide_icons li.active{
   width: 20px;
   background: #fff;
+}
+
+/* sec3 */
+
+#sec3 {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  /* overflow: hidden; */
+}
+#sec3 .inner {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
+h1{
+  font-family: "Back to Black Demo";
+  font-size: 100px;
+  display: flex;
+  letter-spacing: -3px;
+  color: #fff;
+}
+#sec3 h1 {
+  transform: translateX(-100px);
+}
+#sec3 h1 span {
+  opacity: 0;
+}
+#sec3 h1 span:nth-child(6){
+  margin-right: 50px;
+}
+.sec3_svg{
+  fill: #3c568f;
+  stroke: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* sec4 */
+#sec4 {
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+  overflow: hidden;
+}
+#sec4 h1 img{
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 1;
+}
+.img_wrap{
+  width: 500px;
+  height: 500px;
+  /* background: #230537; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.tail {
+  width: calc(100% / 20);
+  height: calc(100% / 20);
+  background: #230537;
 }

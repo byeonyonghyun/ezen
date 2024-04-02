@@ -14,3 +14,8 @@ a {
 	--black: #000;
 	--white: #fff;
 }
+
+@font-face {
+	font-family: "Back to Black Demo";
+	src: url(./font/Back_to_Black_Demo.otf);
+}
