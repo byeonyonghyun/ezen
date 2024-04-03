@@ -1,8 +1,5 @@
-import { useState } from "react"
 
-
-const Viewer01 = () => {
-  const [count, setCount] =useState(0);
+const Viewer01 = ({count}) => {
   return(
     <div>
       <div>현재 카운트:</div>
