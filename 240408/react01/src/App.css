@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 50px;
+}
+.main{
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 100%;
+  font-size: 30px;
+}
+.buttons button:hover{
+  scale: 110%;
+}
+.buttons button:nth-child(1){
+  background: #d8bfd8;
+}
+.buttons button:nth-child(2){
+  background: #d8bfd8;
+}
+.buttons button:nth-child(3){
+  background: #d8bfd8;
+}
+.win {
+  border: 10px solid green;
+  color: green;
+}
+.lose{
+  border: 10px solid red;
+  color:red;
+}
+.tie {
+  border: 10px solid burlywood;
+  color: burlywood;
+}
