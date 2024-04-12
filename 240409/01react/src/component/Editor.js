@@ -7,11 +7,7 @@ import "./Editor.css";
 
 const Editor = ({ initData, onSubmit }) => {
   const navigate = useNavigate();
-  const [state, setState] = useState({
-    date: getFormattedDate(new Date()),
-    emotionId: 3,
-    content: "",
-  });
+  const [state, setState] = useState({});
   useEffect(() => {
     if (initData) {
       setState({
@@ -20,7 +16,6 @@ const Editor = ({ initData, onSubmit }) => {
       });
     }
   }, [initData]);
-  
   const handleChangeDate = (e) => {
     setState({
       ...state,

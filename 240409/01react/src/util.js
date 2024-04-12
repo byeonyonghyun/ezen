@@ -65,12 +65,19 @@ export const emotionList = [
   },
 ];
 
-export const getMonthRangeByData = (date) => {
+export const getMonthRangeByDate = (date) => {
   const beginTimeStamp = new Date(
-    date.getFullYear(), 
-    date.getMonth()+1).getTime();
+    date.getFullYear(),
+    date.getMonth(),
+    1
+  ).getTime();
   const endTimeStamp = new Date(
-    date.getFullYear(), 
-    date.getMonth()+1,23,59,59).getTime()
-return {beginTimeStamp, endTimeStamp}
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0,
+    23,
+    59,
+    59
+  ).getTime();
+  return { beginTimeStamp, endTimeStamp };
 };

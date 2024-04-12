@@ -9,19 +9,19 @@ import Edit from "./pages/Edit";
 const mockData = [
   {
     id: "mock1",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 1,
     emotionId: 1,
     content: "mock1",
   },
   {
     id: "mock2",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 2,
     emotionId: 2,
     content: "mock2",
   },
   {
     id: "mock3",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 3,
     emotionId: 3,
     content: "mock3",
   },
@@ -41,7 +41,7 @@ const reducer = (state, action) => {
       );
     }
     case "DELETE": {
-      return state.filter((it) => String(it.id) !== String(action.targerId));
+      return state.filter((it) => String(it.id) !== String(action.targetId));
     }
     default: {
       return state;
@@ -62,6 +62,7 @@ function App() {
     });
     setIsDataLoaded(true);
   }, []);
+
   const onCreate = (date, emotionId, content) => {
     dispatch({
       type: "CREATE",

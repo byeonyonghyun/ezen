@@ -6,7 +6,7 @@
 }
 .DiaryItem .img_section {
   cursor: pointer;
-  widows: 120px;
+  width: 120px;
   height: 80px;
   border-radius: 5px;
   display: flex;
@@ -22,7 +22,7 @@
   background: #fdce17;
 }
 .DiaryItem .img_section_4 {
-  background: #fd8449;
+  background: #fd8446;
 }
 .DiaryItem .img_section_5 {
   background: #fd565f;
