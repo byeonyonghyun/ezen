@@ -9,45 +9,45 @@ import Edit from "./pages/Edit";
 const mockData = [
   {
     id: "mock1",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 1,
     emotionId: 1,
-    content : "mock1",
+    content: "mock1",
   },
   {
     id: "mock2",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 2,
     emotionId: 2,
-    content : "mock2",
+    content: "mock2",
   },
   {
     id: "mock3",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 3,
     emotionId: 3,
-    content : "mock3",
+    content: "mock3",
   },
-]
+];
 
 const reducer = (state, action) => {
-  switch(action.type){
-    case "INIT" : {
+  switch (action.type) {
+    case "INIT": {
       return action.data;
     }
-    case "CREATE" : {
+    case "CREATE": {
       return [action.data, ...state];
     }
-    case "UPDATE" : {
-      return state.map((it) => 
-        String(it.id) === String(action.data.id) ? {...action.data} : it
+    case "UPDATE": {
+      return state.map((it) =>
+        String(it.id) === String(action.data.id) ? { ...action.data } : it
       );
     }
-    case "DELETE" : {
-      return state.filter((it) => String(it.id) !== String(action.targetId));
+    case "DELETE": {
+      return state.filter((it) => String(it.id) !== String(action.targerId));
     }
     default: {
       return state;
     }
   }
-}
+};
 
 export const DiaryStateContext = React.createContext();
 
@@ -55,19 +55,20 @@ function App() {
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [data, dispatch] = useReducer(reducer, []);
   const idRef = useRef(0);
-  useEffect(()=>{
+  useEffect(() => {
     dispatch({
       type: "INIT",
       data: mockData,
     });
     setIsDataLoaded(true);
-  },[]);
+  }, []);
+
   const onCreate = (date, emotionId, content) => {
     dispatch({
-      type:"CREATE",
-      data:{
+      type: "CREATE",
+      data: {
         id: idRef.current,
-        data: new Date(date).getTime(),
+        date: new Date(date).getTime(),
         emotionId,
         content,
       },
@@ -75,26 +76,26 @@ function App() {
     idRef.current += 1;
   };
 
-  const onUpdate = (targetId, date, emotionId, content) => {
+  const onUpdate = (targerId, date, emotionId, content) => {
     dispatch({
       type: "UPDATE",
-      data:{
-        id: targetId,
-        data: new Date(date).getTime(),
+      data: {
+        id: targerId,
+        date: new Date(date).getTime(),
         emotionId,
         content,
       },
-    })
+    });
   };
 
-  const onDelete = (targetId) => {
+  const onDelete = (targerId) => {
     dispatch({
-      type : "DELETE",
-      targetId
-    })
-  }
-  if(!isDataLoaded) {
-    return <div>데이터를 불러오는 중입니다.</div>
+      type: "DELETE",
+      targerId,
+    });
+  };
+  if (!isDataLoaded) {
+    return <div>데이터를 불러오는 중입니다.</div>;
   } else {
     return (
       <DiaryStateContext.Provider value={data}>
@@ -103,7 +104,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/new" element={<New />} />
             <Route path="/diary/:id" element={<Diary />} />
-            <Route path="/edit" element={<Edit />} />
+            <Route path="/edit/:id" element={<Edit />} />
           </Routes>
         </div>
       </DiaryStateContext.Provider>
