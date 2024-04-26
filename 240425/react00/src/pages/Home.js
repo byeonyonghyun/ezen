@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components'
 import catImage from '../asseet/ggompang.jpeg'
 
@@ -60,16 +61,26 @@ border-radius: 0 8px 0 8px
 
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/question");
+  }
   return (
     <Wrapper>
       <Header>예비 집사 판별기</Header>
       <Contents>
         <Title>나에게 맞는 주인님은?</Title>
         <LogoImage>
-          <img className='rounded-circle' width={350} height={350} src={catImage} alt="catImage"/>
+          <img 
+            className='rounded-circle'
+            width={350}
+            height={350}
+            src={catImage}
+            alt="catImage"
+          />
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나와 잘맞는 고양이 찾기</Desc>
-        <Button>테스트 시작하기</Button>
+        <Button onClick={handleClick}>테스트 시작하기</Button>
       </Contents>
     </Wrapper>
   )
