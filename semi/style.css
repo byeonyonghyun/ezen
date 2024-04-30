@@ -1,0 +1,62 @@
+@import url(./reset.css);
+
+.header {
+  width: 100%;
+  height: 113px;
+  position: relative;
+  border-bottom: 1px solid #0bab6d;
+  box-shadow: 5px  0 25px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo a {
+  height: 4.375rem;
+}
+.gnb {
+  height: inherit;
+  width: 100%;
+}
+.gnb-bar{
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gnb-bar li::after{
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 8px;
+  background: url(./img/ic_star.png) center no-repeat;
+}
+.gnb-bar li:last-child::after{
+  display: none;
+}
+.gnb-btn{
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+.gnb-btn .search {
+  margin-left: 10px
+}
+.gnb-btn .search img{
+  height: 2rem;
+}
+
+
+
+.container {
+  display: none;
+}
+.footer {
+  display: none;
+}

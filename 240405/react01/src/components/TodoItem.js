@@ -2,6 +2,10 @@ import React, {useContext} from 'react';
 import { TodoDispatchContext } from '../App';
 import './TodoItem.css'
 
+REACT_APP_API_KEY = "0fada5c8500a6c81585969f37f0e6edf";
+
+const API_KEY = REACT_APP_API_KEY;
+
 const TodoItem = ({id, isDone, content, createDate}) => {
   const {onUpdate, onDelete} = useContext(TodoDispatchContext);
   const onChangeCheckbox = () => {
