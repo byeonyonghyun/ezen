@@ -1,0 +1,110 @@
+@import url(./reset.css);
+
+header {
+  width: 100%;
+  height: 80px;
+  background: slategray;
+  display: flex;
+  justify-content: center;
+}
+nav {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  height: 50px;
+
+}
+.search-box {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.search-box i {
+  cursor: pointer;
+}
+section {
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  font-size: 3rem;
+}
+
+/* modal content */
+.modal-search{
+  position: fixed;
+  top: -300px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.modal-search.active {
+  top: 0;
+}
+.close-search{
+  position: absolute;
+  color: #777;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.search{
+  width: 500px;
+}
+.field{
+  position: relative;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+.textbox {
+  flex: 5;
+  padding: 15px 15px 15px 50px;
+}
+form i{
+  position: absolute;
+  color: #777;
+  top: 50%;
+  left: 20px;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+.textbox:focus{
+  outline: none;
+}
+.textbox::placeholder{
+  font-style: italic;
+  transition: all 0.3s;
+}
+.textbox:focus::placeholder{
+  opacity: 0;
+}
+
+.search-btn {
+  flex: 1;
+  border: none;
+  background: crimson;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+.search-btn:hover {
+  opacity: 1;
+}
+.hash-tag{
+  display: none;
+  margin-top: 10px;
+  font-size: 15px;
+  color: gold;
+}

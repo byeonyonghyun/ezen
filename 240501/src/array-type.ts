@@ -7,7 +7,7 @@ interface IPerson {
   age?:number;
 }
 
-const personArray = [
+const personArray: IPerson[] = [
   {
     name: "David"
   },
@@ -15,4 +15,5 @@ const personArray = [
     name:"june",
     age: 33
   }
-]
+];
+
