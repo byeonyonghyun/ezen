@@ -1,0 +1,1 @@
+const tuple: (boolean | string)[] = [true, "the result is ok"]

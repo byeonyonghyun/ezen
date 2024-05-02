@@ -1,0 +1,1 @@
+const multiply = (result:number, val: number) => result * val;
