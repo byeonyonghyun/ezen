@@ -1,0 +1,93 @@
+@import url(./reset.css);
+
+body {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.faq-inner {
+  width: 700px;
+}
+.faq-inner h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.accordion{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.accordion .title, .accordion .content {
+  background: #303030;
+  padding: 10px 15px;
+  margin-bottom: 7px;
+}
+.accordion .title {
+  cursor: pointer;
+}
+.accordion .title:hover{
+  background: #353b48;
+}
+.accordion .title::after{
+  content: "\2b";
+  font-family: fontawesome;
+  float: right;
+  margin-top: 3px;
+  transition: all 0.3s;
+}
+.accordion .title.active{
+  background: crimson;
+}
+.accordion .title.active::after {
+  transform: rotate(45deg);
+}
+.accordion .content {
+  display: none;
+}
+.newsletter {
+  width: 100%;
+  text-align: center;
+}
+.newsletter p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.newsletter form {
+  display: flex;
+}
+.newsletter #email, #submit {
+  border: none;
+  height: 60px;
+  font-size: 20px;
+}
+#email {
+  flex: 3;
+  padding-left: 20px;
+}
+#email:focus {
+  outline: none;
+}
+#email::placeholder {
+  opacity: 1;
+  transition: all 0.3s;
+}
+#email:focus::placeholder {
+  opacity: 0;
+}
+#submit {
+  flex: 1;
+  background: crimson;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#submit:hover::after {
+  content: "\f054";
+  font-family: fontawesome;
+  margin-left: 6px;
+}
